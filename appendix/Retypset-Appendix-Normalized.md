@@ -6,7 +6,7 @@ _Ex Breviario Carmelitarum 1866 - Pars Æstiva_
 INFRA OCTAVAM
 Sancti Simonis.
 
-Fit de ea com. in Laud. per Añam ad Benedictus de Laud. et in Vesp. per Añam ad Magnif. de ij. Vesp. Festi, exceptis Ve-speris Sabbati, in quibus fit comm. per Añam ad Magnif. de j. Vesp. Festi.
+Fit de ea com. in Laud. per Añam ad Benedictus de Laud. et in Vesp. per Añam ad Magnif. de ij. Vesp. Festi, exceptis Vesperis Sabbati, in quibus fit comm. per Añam ad Magnif. de j. Vesp. Festi.
 
 ## Translationis S. Joannis a Cruce
 
@@ -160,7 +160,7 @@ Ps. Dóminus regnávit, cum reliquis. 21.
 
 Aña. Apéruit os suum in oratióne, et Dóminus spíritu intelligéntiæ replévit illum.
 
-Aña. Cibávit illum Dóminus pane vitæ et intel-léctus, et aqua sapiéntiæ salutáris potávit illum.
+Aña. Cibávit illum Dóminus pane vitæ et intelléctus, et aqua sapiéntiæ salutáris potávit illum.
 
 Aña. Vir sápiens plebem suam érudit, et fructus sensus illíus fidéles sunt.
 
@@ -292,12 +292,12 @@ S. Mariæ Magdalenæ.
 
 Semiduplex.
 
-De Epístola sancti Hie-rónymi Presbyteri ad Eustóchium.
+De Epístola sancti Hierónymi Presbyteri ad Eustóchium.
 De Custod. Virg.
 
 Lectio iij.
 
-Lia fuit in véteri lege felícitas. Ibi dícitur : Beátus qui habet semen in Sion, et domésticos in Jerúsa-lem; et : Maledícta stéri-lis, quæ non pariébat; et : Fílii tui sicut novéllæ oli-várum in circúitu mensæ tuæ. Vácuus erat orbis; et, ut de typicis táceam, sola erat benedíctio liberórum. Proptérea et Abraham jam senex Cetúræ copulátur, et Jacob mandrágoris redímitur, et conclúsam vulvam in Ecclésiæ figúram Rachel conquéritur. Paulátim vero increscénte ségete messor immíssus est. Virgo Elías, Eliséus virgo, vírgines multi fílii Prophetárum. Jeremíæ dícitur: Et tu ne accípias uxórem. Sanctificátus in útero, captivitáte propínqua, uxórem prohibétur accípere. Aliis verbis idípsum Apóstolus lóquitur: Exístimo hoc bonum esse propter instántem necessitátem. Quæ est ista necéssitas, quæ aufert gáudia nuptiárum? Tempus breviátum est, in próximo erit Nabuchodónosor.
+Alia fuit in véteri lege felícitas. Ibi dícitur : Beátus qui habet semen in Sion, et domésticos in Jerúsalem; et : Maledícta stérilis, quæ non pariébat; et : Fílii tui sicut novéllæ olivárum in circúitu mensæ tuæ. Vácuus erat orbis; et, ut de typicis táceam, sola erat benedíctio liberórum. Proptérea et Abraham jam senex Cetúræ copulátur, et Jacob mandrágoris redímitur, et conclúsam vulvam in Ecclésiæ figúram Rachel conquéritur. Paulátim vero increscénte ségete messor immíssus est. Virgo Elías, Eliséus virgo, vírgines multi fílii Prophetárum. Jeremíæ dícitur: Et tu ne accípias uxórem. Sanctificátus in útero, captivitáte propínqua, uxórem prohibétur accípere. Aliis verbis idípsum Apóstolus lóquitur: Exístimo hoc bonum esse propter instántem necessitátem. Quæ est ista necéssitas, quæ aufert gáudia nuptiárum? Tempus breviátum est, in próximo erit Nabuchodónosor.
 
 Vesp. de seq. Psalm. et comm. præcedentis.
 
@@ -861,7 +861,8 @@ Parvulus erat qui dixit : Dómine, non exaltávi cor meum, neque eláti sunt óc
 R. Tu glória Jerúsalem.
 Léctio ix.
 
-Pulchérrimus connéctitur fídei locus, quando ómnia sibi trádita dicit a Patre suo. Cum ómnia legis, omnipoténtem agnóscis non decolórem non degénerem Patris. Cum trádita legis, Fílium confitéris, cui per natúram ómnia uníus substántiæ jure sunt própria, non dono colláta per grátiam. Addidit quoque : Nemo scit quis est Fílius nisi Pater, et quis est Pater nisi Fílius, et cui volúerit Fílius reveláre. Ut scias autem, quia sicut Fílius Patrem, quibus vult, revélat, étiam Pater revélat, quibus vult, Fílium, audi dicéntem ipsum Dóminum Jesum, cum laudáret Petrum, quod eum Fílium Dei esse conféssus sit : Beátus es Simon Bar-Jona, quia non caro et sanguis revelávit tibi, sed Pater meus, qui in cælis est.
+Pulchérrimus connéctitur fídei locus, quando ómnia sibi trádita dicit a Patre suo. Cum ómnia legis, omnipoténtem agnóscis non decolórem non degénerem Patris. Cum trádita legis, Fílium confitéris, cui per natúram ómnia uníus substántiæ jure sunt própria, non dono colláta per grátiam. Addidit quoque : Nemo scit quis est Fílius nisi Pater, et quis est Pater nisi Fílius, et cui volúerit Fílius reveláre. Ut scias autem, quia sicut Fílius Patrem, quibus vult, revélat, étiam Pater revélat, quibus vult, Fílium, audi dicéntem ipsum Dóminum Jesum, cum laudáret Petrum, quod eum Fílium Dei esse conféssus sit : Beátus es Simon BarJona, quia non caro et sanguis revelávit tibi, sed Pater meus, qui in cælis est.
+<!-- Is Bar Jona one word or two? -->
 
 ℟. Super salútem.
 
@@ -1167,9 +1168,9 @@ Ben. Fílius Vírginis.
 
 Lectio vj.
 
-QUæ verba consíderans mens devóta, cum ipso Prophéta ait : Quam dúlcia fáucibus meis, id est ómnibus affectiónibus, elóquia tua! Porro dulcédo hæc quam in verbis beátæ Vírginis devóta mens sentit, est ardor piæ devotiónis quam in eis ánima experimentáliter probat. Distinguámus ígitur per órdinem has septem flammas amóris verbórum Vírginis benedíctæ. Prima est flamma amóris separántis. Secúnda amóris transformántis. Tértia amóris communicántis. Quarta amóris ju-bilántis. Quinta amóris soporántis. Sexta amóris compatiéntis. Séptima amóris consummántis.
+QUæ verba consíderans mens devóta, cum ipso Prophéta ait : Quam dúlcia fáucibus meis, id est ómnibus affectiónibus, elóquia tua! Porro dulcédo hæc quam in verbis beátæ Vírginis devóta mens sentit, est ardor piæ devotiónis quam in eis ánima experimentáliter probat. Distinguámus ígitur per órdinem has septem flammas amóris verbórum Vírginis benedíctæ. Prima est flamma amóris separántis. Secúnda amóris transformántis. Tértia amóris communicántis. Quarta amóris jubilántis. Quinta amóris soporántis. Sexta amóris compatiéntis. Séptima amóris consummántis.
 
-℟. Beátus homo, qui au-dit me, et qui vígilat ad fores meas quotídie et ob-sérvat ad postes óstii mei. * Qui me invénerit invé-niet vitam, et háuriet sa-lútem a Dómino. ℣. Qui autem in me pec-cáverit lædet ánimam suam; omnes qui me odé-runt, díligunt mortem. Qui me. Glória Patri. Qui me.
+℟. Beátus homo, qui audit me, et qui vígilat ad fores meas quotídie et obsérvat ad postes óstii mei. * Qui me invénerit invéniet vitam, et háuriet salútem a Dómino. ℣. Qui autem in me peccáverit lædet ánimam suam; omnes qui me odérunt, díligunt mortem. Qui me. Glória Patri. Qui me.
 
 IN TERTIO NOCTURNO.
 
@@ -1177,18 +1178,18 @@ Aña. Unde hoc mihi, ut véniat Mater Dómini mei ad me?
 
 Ps. Cantáte. [125]
 
-Aña. Misericórdia ejus a progénie in progénies ti-méntibus eum.
+Aña. Misericórdia ejus a progénie in progénies timéntibus eum.
 
 Ps. Dóminus regnávit.
 
-Aña. Suscépit Israel púe-rum suum, recordátus mi-sericórdiæ suæ.
+Aña. Suscépit Israel púerum suum, recordátus misericórdiæ suæ.
 
 Ps. Cantáte Dómino.
 
 ℣. Ego dilécto meo. ℟. Et ad me convérsio ejus, allel.
 Ben. Fons Evangélii.
 
-Léctio sancti Evangélii se-cúndum Lucam.
+Léctio sancti Evangélii secúndum Lucam.
 
 Léctio vij. Cap. 2.
 
@@ -1198,9 +1199,9 @@ De Homilía Venerábilis Bedæ Presbyteri.
 
 In Homil. de Tempore. Dom. j. post Epiph.
 
-Mater ejus, inquit Evangelísta, con-servábat ómnia verba hæc in Corde suo. Omnia quæ de Dómino vel a Dómino dicta, sive acta cognóverat Mater Virgo, diligéntius in Cor-de retinébat, sollícite cun-cta memóriæ commendá-bat, ut cum demum tem-pus prædicándæ sive scribéndæ Incarnatiónis ejus adveníret, sufficiénter univérsa, prout essent ge-sta, posset explicáre quæ-réntibus. Imitémur et nos, fratres mei, piam Dómini Matrem, ipsi quoque óm-nia verba et facta Dómini ac Salvatóris nostri fixa in corde conservándo.
+Mater ejus, inquit Evangelísta, conservábat ómnia verba hæc in Corde suo. Omnia quæ de Dómino vel a Dómino dicta, sive acta cognóverat Mater Virgo, diligéntius in Corde retinébat, sollícite cuncta memóriæ commendábat, ut cum demum tempus prædicándæ sive scribéndæ Incarnatiónis ejus adveníret, sufficiénter univérsa, prout essent gesta, posset explicáre quæréntibus. Imitémur et nos, fratres mei, piam Dómini Matrem, ipsi quoque ómnia verba et facta Dómini ac Salvatóris nostri fixa in corde conservándo.
 
-℟. Aquæ multæ non po-tuérunt exstínguere cari-tátem : * Neque flúmina óbruent eam. ℣. Si déderit homo om-nem substántiam domus suæ pro dilectióne, quasi nihil despíciet eam. Ne-que flúmina.
+℟. Aquæ multæ non potuérunt exstínguere caritátem : * Neque flúmina óbruent eam. ℣. Si déderit homo omnem substántiam domus suæ pro dilectióne, quasi nihil despíciet eam. Neque flúmina.
 
 Ben. Ab hoste malígno.
 
@@ -1448,15 +1449,15 @@ Lectio vj.
 Ex loco vero, ubi corpus prius jacúerat, fons vivus aquæ limpidíssimæ, et mirífici odóris scaturívit : nec non ex ea parte, qua caput Mártyris requiescébat, medicinális ólei liquor cæpit efflúere : ubi póstea manu artíficis aqua illa grádibus lapídeis circúmdata est, quæ anniversário die Mártyris sólito copiósius excrescébat : tuncque étiam óleum a primis vésperis usque ad solis occásum diéi sequéntis effluébat, quod diligentíssime a pópulo colligebátur, eóque plures infírmi sanitátem recuperábant. Rursum anno millésimo sexcentésimo décimo quinto sancti Angeli relíquiæ ex véteri arca in novam argénteam transpósitæ, processionáliter magno pópuli concúrsu, summáque cum celebritáte delátæ sunt, et quátuor púeri ab hérnia liberáti fuérunt : et íterum anno millésimo sexcentésimo sexagésimo secúndo, numeróso comitánte pópulo, grandique cum pietáte ex antíqua Ecclésia ad novam, Leocaténsium cívium eleemósynis eréctam, translátæ fuérunt.
 
 
-℟. Instar Patris sui Elíæ, Angelus fílium víduæ revocávit ad vitam, * In virtúte passiónis Dómini nostri Jesu Christi. ℣. Scitóte, dixit adolé-scens, me sancti Angeli précibus ab utráque morte liberátum. In virtúte. Glória Patri. In virtúte.
+℟. Instar Patris sui Elíæ, Angelus fílium víduæ revocávit ad vitam, * In virtúte passiónis Dómini nostri Jesu Christi. ℣. Scitóte, dixit adoléscens, me sancti Angeli précibus ab utráque morte liberátum. In virtúte. Glória Patri. In virtúte.
 
 IN TERTIO NOCTURNO.
 
-Aña. In Dómino confí-sus Angelus a peccatóre pro veritáte et justítia in templo sancto morti trá-ditus fuit, et facta est in cælo sedes ejus.
+Aña. In Dómino confísus Angelus a peccatóre pro veritáte et justítia in templo sancto morti tráditus fuit, et facta est in cælo sedes ejus.
 
 Ps. In Dómino. [36]
 
-Aña. In Carméli Reli-giónem ingréssus Angelus sine mácula operátus est justítiam, et requiéscit in monte felicitátis ætérnæ.
+Aña. In Carméli Religiónem ingréssus Angelus sine mácula operátus est justítiam, et requiéscit in monte felicitátis ætérnæ.
 
 Ps. Dómine, quis.
 
@@ -1470,19 +1471,19 @@ Léctio sancti Evangélii secúndum Matthæum.
 
 Lectio vij. Cap. 16.
 
-In illo témpore : Dixit Jesus discípulis suis : Si quis vult post me vení-re, ábneget semetípsum, et tollat crucem suam, et sequátur me. Et réliqua.
+In illo témpore : Dixit Jesus discípulis suis : Si quis vult post me veníre, ábneget semetípsum, et tollat crucem suam, et sequátur me. Et réliqua.
 
 Homilía sancti Gregórii Papæ.
 
 Ex Hom. 37. in Evang.
 
-Quid est, quod díci-mus, relinquámus et nos : si enim nosmetípsos relínquimus, quo íbimus extra nos? vel quis est qui vadit, si se déserit? Sed áliud sumus per peccátum lapsi, áliud per natúram cónditi; áliud quod fécimus, áliud quod facti sumus. Relinquámus nosmetípsos, quales pec-cándo nos fécimus : et maneámus nosmetípsi, quales per grátiam facti sumus.
+Quid est, quod dícimus, relinquámus et nos : si enim nosmetípsos relínquimus, quo íbimus extra nos? vel quis est qui vadit, si se déserit? Sed áliud sumus per peccátum lapsi, áliud per natúram cónditi; áliud quod fécimus, áliud quod facti sumus. Relinquámus nosmetípsos, quales peccándo nos fécimus : et maneámus nosmetípsi, quales per grátiam facti sumus.
 
-℟. Sanctus Joánnes Ba-ptísta Angelo dixit : Læ-táre quia sánguinem tuum pro veritáte effúndes, et Angeli te exspéctant * In cœlésti pátria. ℣. Intrépidus Christi miles parta victória per-ducéris ad glóriam. In.
+℟. Sanctus Joánnes Baptísta Angelo dixit : Lætáre quia sánguinem tuum pro veritáte effúndes, et Angeli te exspéctant * In cœlésti pátria. ℣. Intrépidus Christi miles parta victória perducéris ad glóriam. In.
 
 Lectio viij.
 
-Ecce étenim qui su-pérbus fuit, si con-vérsus ad Christum húmi-lis factus est, semetípsum relíquit. Si luxuriósus quis-que ad continéntiam vi-tam mutávit, abnegávit útique, quod fuit. Si avá-rus quisque ambíre jam désiit, et largíri dídicit própria, qui prius aliéna rapiébat, proculdúbio semetípsum relíquit. Ipse quidem est per natúram, sed non est ipse per malítiam. Hinc enim scriptum est : Verte ímpios, et non erunt. Convérsi namque, ímpii non erunt; non quia non erunt omníno in esséntia, sed scílicet non erunt in impietátis culpa.
+Ecce étenim qui supérbus fuit, si convérsus ad Christum húmilis factus est, semetípsum relíquit. Si luxuriósus quisque ad continéntiam vitam mutávit, abnegávit útique, quod fuit. Si avárus quisque ambíre jam désiit, et largíri dídicit própria, qui prius aliéna rapiébat, proculdúbio semetípsum relíquit. Ipse quidem est per natúram, sed non est ipse per malítiam. Hinc enim scriptum est : Verte ímpios, et non erunt. Convérsi namque, ímpii non erunt; non quia non erunt omníno in esséntia, sed scílicet non erunt in impietátis culpa.
 
 ℟. Moriénte Angelo audíta est vox de cælo dicens : Veni Angele ad regnum tibi parátum a constitutióne mundi, ut inter Sanctos collocéris, * Et cum Martýribus in ætérnum vivas. ℣. Tu in supérna Jerúsalem corónam glóriæ meruísti. Et.
 
