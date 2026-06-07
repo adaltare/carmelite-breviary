@@ -284,6 +284,8 @@ Vesp. a cap. seq. comm. præcedentis.
 
 ## S. Mariæ Magdalenæ de Pazzis
 
+<!-- Could not find the INFRA OCTAVAM in the handout -->
+
 ### DIE XXX. MAII.
 
 Quinta die infra Octav.
@@ -299,7 +301,9 @@ Lectio iij.
 
 Alia fuit in véteri lege felícitas. Ibi dícitur : Beátus qui habet semen in Sion, et domésticos in Jerúsalem; et : Maledícta stérilis, quæ non pariébat; et : Fílii tui sicut novéllæ olivárum in circúitu mensæ tuæ. Vácuus erat orbis; et, ut de typicis táceam, sola erat benedíctio liberórum. Proptérea et Abraham jam senex Cetúræ copulátur, et Jacob mandrágoris redímitur, et conclúsam vulvam in Ecclésiæ figúram Rachel conquéritur. Paulátim vero increscénte ségete messor immíssus est. Virgo Elías, Eliséus virgo, vírgines multi fílii Prophetárum. Jeremíæ dícitur: Et tu ne accípias uxórem. Sanctificátus in útero, captivitáte propínqua, uxórem prohibétur accípere. Aliis verbis idípsum Apóstolus lóquitur: Exístimo hoc bonum esse propter instántem necessitátem. Quæ est ista necéssitas, quæ aufert gáudia nuptiárum? Tempus breviátum est, in próximo erit Nabuchodónosor.
 
-Vesp. de seq. Psalm. et comm. præcedentis.
+Vesp. de seq.
+
+Psalm. et comm. præcedentis.
 
 ### DIE I. JUNII.
 
@@ -361,11 +365,13 @@ Lectio j. Cap. 2.
 
 Dixérunt viri civitátis ad Eliséum: Ecce habitátio civitátis hujus óptima est, sicut tu ipse, Dómine, pérspicis: sed aquæ péssimæ sunt, et terra stérilis. At ille ait: Afférte mihi vas novum, et míttite in illud sal. Quod cum attulíssent, egréssus ad fontem aquárum, misit in illum sal, et ait: Hæc dicit Dóminus: Sanávi aquas has, et non erit ultra in eis mors, neque sterílitas. Sanátæ sunt ergo aquæ usque in diem hanc, juxta verbum Eliséi, quod locútus est.
 
+<!-- Could not find the responsory -->
+
 Lectio ij.
 
 Ascéndit autem inde in Bethel: cumque ascénderet per viam, púeri parvi egréssi sunt de civitáte, et illudébant ei, dicéntes : Ascénde calve, ascénde calve. Qui cum respexésset, vidit eos, et maledíxit in nómine Dómini : egressíque sunt duo ursi de saltu, et laceravérunt ex eis quadragínta duos púeros. Abiit autem inde in montem Carméli, et inde revérsus est in Samaríam.
 
-Sermo sancti Ambrósii Epíscopi. 
+Sermo sancti Ambrósii Epíscopi.
 
 Serm. 86. Lectio iij.
 
@@ -383,6 +389,7 @@ De libro quarto Regum.
 Lectio j. Cap. 6.
 
 Rex autem Syriæ pugnábat contra Israel, consiliúmque íniit cum servis suis, dicens : In loco illo et illo ponámus insídias. Misit ítaque vir Dei Eliséus ad regem Israel, dicens : Cave ne tránseas in locum illum, quia ibi Syri in insídiis sunt. Misit ítaque rex Israel ad locum, quem díxerat ei vir Dei, et præoccupávit eum : et observávit se ibi non semel, neque bis. Conturbatúmque est cor regis Syriæ pro hac re; et convocátis servis suis ait : Quare non indicátis mihi, quis próditor mei sit apud regem Israel? Dixítque unus servórum ejus : Nequáquam dómine mi rex : sed Eliséus Prophéta, qui est in Israel, índicat Regi Israel ómnia verba, quæcúmque locútus fúeris in conclávi tuo. Dixítque eis : Ite, et vidéte ubi sit, ut mittam, et cápiam eum. Annuntiaverúntque ei, dicéntes : Ecce in Dothan. Misit ergo illuc equos, et currus, et robur exércitus. Qui cum veníssent nocte, circumdedérunt civitátem.
+<!-- Could not find the responsory -->
 
 Lectio ij.
 
@@ -394,7 +401,9 @@ Serm. 86. Lectio iij.
 
 Noli timére, ait Eliséus púero, plures nobíscum sunt, quam cum illis. Vidéte beatitúdinis méritum : Prophéta núntiat étiam de multitúdine : cum puer adhuc incértus sit de salúte. Spirituáles óculi carnálibus quanto plus cernunt? Hic pérspicit armatórum númerum, et ille non cernit defensiónis indícium. Quanta est divína misericórdia! Defértur homínibus benefícium, nec vidétur auxílium : periclitántem consequúntur, et nésciunt. Sanctus Eliséus hostes suos non armis superábat, sed oratióne vincébat.
 
-In Vesp. fit commem. SS. Marci et Marcelliani Fratrum Mart. Aña. Hac est vera fratérnitas. ℣. Lætámini. [57]
+In Vesp. fit commem. SS. Marci et Marcelliani Fratrum Mart. Aña. Hac est vera fratérnitas.
+
+℣. Lætámini. [57]
 
 Oratio.
 
@@ -414,6 +423,8 @@ Lectio j. Cap. 6.
 
 Congregávit Bénadad Rex Syriæ univérsum exércitum suum, et ascéndit, et obsidébat Samaríam. Fáctaque est fames magna in Samaría : et támdiu obséssa est, donec venumdarétur caput ásini octogínta argénteis, et quarta pars cabi stércoris columbárum quinque argénteis. Cumque Rex Israel transíret per murum, múlier quædam exclamávit ad eum, dicens : Salva me, dómine mi Rex. Qui ait : Non te salvat Dóminus : unde te possum salváre? de área vel de torculári? Dixítque ad eam Rex : Quid tibi vis? Quæ respóndit : Múlier ista dixit mihi : Da fílium tuum, ut comedámus eum hódie, et fílium meum comedémus cras. Cóximus ergo fílium meum, et comédimus. Dixíque ei die áltera : Da fílium tuum, ut comedámus eum. Quæ abscóndit fílium suum. Quod cum audísset Rex, scidit vestiménta sua, et transíbat per murum. Vidítque omnis pópulus cilícium, quo vestítus erat ad carnem intrínsecus. Et ait Rex : Hæc mihi fáciat Deus, et hæc addat, si stéterit caput Eliséi fílii Saphat super ipsum hódie.
 
+<!-- Could not find the responsory -->
+
 Lectio ij.
 
 Eliséus autem sedébat in domo sua, et senes sedébant cum eo. Præmísit ítaque virum : et ántequam veníret núntius ille, dixit ad senes : Numquid scitis, quod míserit fílius homicídæ hic, ut præcidátur caput meum? Vidéte ergo cum vénerit núntius, cláudite óstium, et non sinátis eum introíre : ecce enim sónitus pedum dómini ejus post eum est. Adhuc illo loquénte eis, appáruit núntius, qui veniébat ad eum, et ait : Ecce tantum malum a Dómino est : quid ámplius exspectábo a Dómino? Dixit autem Eliséus : Audíte verbum Dómini : Hæc dicit Dóminus : In témpore hoc cras módius símilæ uno statére erit, et duo módii hórdei statére uno in porta Samariæ. Respóndens unus de dúcibus, super cujus manum Rex incumbébat, hómini Dei, ait : Si Dóminus fécerit étiam cataráctas in cælo, numquid póterit esse quod lóqueris? Qui ait : Vidébis óculis tuis, et inde non cómedes.
@@ -432,10 +443,13 @@ Lectio ix.
 
 Marcus et Marcelliánus fratres Románi, propter Christiánam fidem a Fabiáno duce comprehénsi, ad stípitem alligáti sunt, pédibus clavis confíxis. Ad quos cum ita loquerétur judex : Resipíscite míseri, et vos ipsos ab his cruciátibus erípite, respondérunt : Numquam tam jucúnde epuláti sumus, quam hæc libénter Jesu Christi causa perférimus, in cujus amóre nunc fixi esse cæpimus : útinam támdiu nos hæc pati sinat, quámdiu hoc corruptíbili córpore vestíti érimus. Qui diem noctémque in torméntis divínas laudes canéntes, dénique telis transfixi, ad martyrii glóriam pervenérunt. Quorum córpora via Ardeatína sepúlta sunt.
 
-In Laud. com. SS. Mart. Aña. Istórum. ℣. Mirábilis. [69] Oratio. Præsta quæsumus, ut supra.
+In Laud. com. SS. Mart. Aña. Istórum.
+
+℣. Mirábilis. [69]
+
+Oratio. Præsta quæsumus, ut supra.
 
 Vesp. seq. Ps. præc.
-
 <!-- Is Elisei commemerated on Die XIX? -->
 
 ### DIE XX. JUNII.
@@ -449,6 +463,8 @@ De libro quarto Regum.
 Lectio j. Cap. 8.
 
 Eliséus autem locútus est ad mulíerem, cujus vívere fécerat fílium, dicens : Surge, vade tu et domus tua, et peregrináre ubicúmque repéreris : vocávit enim Dóminus famem, et véniet super terram septem annis. Quæ surréxit, et fecit juxta verbum hóminis Dei : et vadens cum domo sua, peregrináta est in terra Philísthiim diébus multis. Cumque finíti essent anni septem, revérsa est múlier de terra Philísthiim : et egréssa est ut interpelláret Regem pro domo sua, et pro agris suis.
+
+<!- Could not find the responsory -->
 
 Lectio iij.
 
@@ -470,11 +486,15 @@ Lectio ix.
 
 Silvérius Campánus post Agapítum próxime Póntifex creátus est : cujus doctrína et sánctitas illúxit in insectándis hæréticis, et constántis ánimi magnitúdo perspécta est in tuéndo judício Agapíti. Nam Anthímum, quem, quia Eutychiánam hæresim defendébat, Agapítus ab Episcopátu Constantinopolitáno deposúerat, cum a Theodóra Augústa sæpíssime rogátus esset, restitúere nóluit. Quámobrem iráta múlier mandat Belisário, ut Silvérium mittat in exsílium. Qui exsulávit in ínsula Póntia, unde his verbis scripsísse fertur ad Amatórem Epíscopum : Susténtor pane tribulatiónis et aqua angústiæ, nec tamen dimísi aut dimítto offícium meum. Et sane brevi incómmodis, ærumnísque conféctus, obdormívit in Dómino duodécimo Kaléndas Júlii; cujus corpus Romam delátum et in Basílica Vaticána depósitum multis miráculis illustrátum fuit. Præfuit Ecclésiæ annos tres et ámplius, creátis mense Decémbri Presbyteris trésdecim, Diáconis quinque, Epíscopis per divérsa loca decem et novem.
 
-In Laud. com. S. Silvérii Papæ et Mart. Aña. Nisi granum. ℣. Magna est glória. Oratio. Infirmitátem, de Comm. [40]
+In Laud. com. S. Silvérii Papæ et Mart. Aña. Nisi granum.
+
+℣. Magna est glória.
+
+Oratio. Infirmitátem, de Comm. [40]
 
 ### DOMINICA
 
-infra Octavam S. Elisei.
+Infra Octavam S. Elisei.
 
 Duplex minus.
 
@@ -482,7 +502,9 @@ Omnia ut in die 476. exceptis hic signatis.
 
 Ad Vesp. nisi præcedat Festum Duplex, Aña. Póstula quod vis, quæ sola dicatur.
 
-Psalmi de Offic. præc. Et fit com. Dom. occurr.
+Psalmi de Offic. præc.
+
+Et fit com. Dom. occurr.
 
 IN PRIMO NOCTURNO.
 
@@ -550,7 +572,7 @@ Lectio viij.
 
 Nomine vero Caphárnaum, quæ ager consolatiónis interpretátur, Géntium prædicásse salútem, ubi majóra quotídie signa per Apóstolos, Apostolorúmque successóres, non tam in córporum quam in animárum sanatióne patrántur. Igitur vídua, ad quam Elías missus est, Géntium desígnat Ecclésiam, quæ a suo diútius conditóre desérta, pópulum rectæ fídei néscium, quasi páuperem fílium egéna stipe nutriébat, id est, verbo fructus ex parte docébat, donec advéniens sermo Prophéticus, qui exsiccáto véllere Israélis, útpote clausa cæli jánua, fame periclitabátur in Judæa, pascerétur ibi simul et pásceret, et recéptus vidélicet a credéntibus, et refíciens ipse credéntes.
 
-R. Eliséus ait.
+℟. Eliséus ait.
 
 Lectio ix. de Homilia Dominicæ occurrentis; et fit comm. ejusdem in Laud. et Vesperis.
 
@@ -641,6 +663,7 @@ Merito ígitur Náaman, cujus dum aqua corpus ablúitur, fide pectus ablúitur, 
 Vesp. a cap. seq.
 
 ## SS. Decem Millium Martyrum.
+<!-- This feast seems to have been corrupted or missing -->
 
 DIE XXII. JUNII.
 
@@ -690,7 +713,7 @@ Ad Matutinum. Invitat. Hymn. Aña prima j. Noct. et Psalm. ut in die. ℣. et �
 
 Sacerd. ℣. Ora pro nobis.
 
-#### AD LAUDES.
+AD LAUDES.
 
 Prima Aña Laudum, Ps. Capit. Hymnus, ℣. et Oratio ut in die. 571.
 
@@ -705,11 +728,8 @@ Ad Horas, omnia ut in die.
 AD VESPERAS.
 
 Prima Aña Laudum, Ps. Capitul. Hymn. ℣. et Oratio ut in die.
-
 Ad Magnif. Aña. Quam pulchra es, et quam decóra caríssima in delíciis! statúra tua assimiláta est palmæ, et úbera tua botris : caput tuum, ut Carmélus : collum tuum, sicut turris ebúrnea, allelúia.
-
 Si prædicta Aña dicatur pro com. Oct. ℣. Visitátio est hódie.
-
 Domin. infra Octav. fit com. Oct. per Añas de utrisque Vesp. et Laud. Festi.
 
 ### DIE VII. JULII.
@@ -728,8 +748,6 @@ Et factum est, inquit, ut audívit salutatiónem Maríæ Elísabeth, exsultávit
 
 Vesp. a cap. seq. comm. præcedentis.
 
-<!-- Removed S. Elisabeth, Reginæ Portugalliæ. -->
-
 ### DIE IX. JULII.
 
 In Octava
@@ -747,6 +765,7 @@ In primo Nocturno, Lectiones de Scriptura occurrente.
 
 IN SECUNDO NOCTURNO.
 
+<!-- Not sure where this blessing went... -->
 Sermo sancti Ambrósii Epíscopi.
 
 Lib. 2. in Luc. cap. 1.
@@ -802,7 +821,9 @@ In Vesperis commem. sequentis.
 DIE XIII. JULII.
 
 Translationis S. Teresiæ
-Virginis Ordinis Nostri. Duplex minus.
+Virginis Ordinis Nostri.
+
+Duplex minus.
 
 Omnia ut in ejus Officio menstruo, [230] exceptis hic signatis.
 
@@ -822,7 +843,7 @@ Ex Bulla Canonizat. 26.
 
 Lectio iv.
 
-Lúribus signis manifestávit Deus, quam sublímem glóriæ gradum beátæ Terésiæ elargítus in cælis esset; multæ étenim moniáles, religiósæ, ac timéntes Deum vidérunt decórem glóriæ ejus. Alia étenim conspéxit supra tectum ecclésiæ, et in Choro, et super decumbéntis cubículum multitúdinem cæléstium luminárium; ália Christum Dóminum, magno coruscántem splendóre, ingénti Angelórum frequéntia circúmdatum, ejus lecto assisténtem; ália plúrimos, albis amíctos véstibus, ipsíus cellam ingrediéntes, ac cubíli circumfúsos. Quædam étiam in ipso tránsitus moménto cándidam colúmbam ex ipsíus ore in cælum evolántem; ália splendórem crystálli instar fenéstra egrediéntem vidit. Quin étiam quædam arbor calce ac macérie obstrúcta, ac jam dudum árida, quæ cubículo próxima erat, præter omnem témporis et natúræ ratiónem, repénte flóribus onústa in ipsa tránsitus hora appáruit.
+Plúribus signis manifestávit Deus, quam sublímem glóriæ gradum beátæ Terésiæ elargítus in cælis esset; multæ étenim moniáles, religiósæ, ac timéntes Deum vidérunt decórem glóriæ ejus. Alia étenim conspéxit supra tectum ecclésiæ, et in Choro, et super decumbéntis cubículum multitúdinem cæléstium luminárium; ália Christum Dóminum, magno coruscántem splendóre, ingénti Angelórum frequéntia circúmdatum, ejus lecto assisténtem; ália plúrimos, albis amíctos véstibus, ipsíus cellam ingrediéntes, ac cubíli circumfúsos. Quædam étiam in ipso tránsitus moménto cándidam colúmbam ex ipsíus ore in cælum evolántem; ália splendórem crystálli instar fenéstra egrediéntem vidit. Quin étiam quædam arbor calce ac macérie obstrúcta, ac jam dudum árida, quæ cubículo próxima erat, præter omnem témporis et natúræ ratiónem, repénte flóribus onústa in ipsa tránsitus hora appáruit.
 
 ℟. Dixit mihi. [233]
 
@@ -859,6 +880,7 @@ Léctio viij.
 Parvulus erat qui dixit : Dómine, non exaltávi cor meum, neque eláti sunt óculi mei, neque ambulávi in magnis, neque in mirabílibus super me. Et ut scires párvulum hunc non ætáte, non sensu fuísse, sed humilitáte sui, et quadam declinatióne jactántiæ, áddidit : sed exaltávi ánimam meam. Vides quam excélsus fúerit hic párvulus, quanto virtútum sublímis vértice? Tales nos párvulos vult esse Apóstolus, cum dicit : Si quis vidétur sápiens esse inter vos in hoc sæculo, stultus fiat ut sit sápiens. Sapiéntia enim hujus mundi stultítia est apud Deum.
 
 R. Tu glória Jerúsalem.
+
 Léctio ix.
 
 Pulchérrimus connéctitur fídei locus, quando ómnia sibi trádita dicit a Patre suo. Cum ómnia legis, omnipoténtem agnóscis non decolórem non degénerem Patris. Cum trádita legis, Fílium confitéris, cui per natúram ómnia uníus substántiæ jure sunt própria, non dono colláta per grátiam. Addidit quoque : Nemo scit quis est Fílius nisi Pater, et quis est Pater nisi Fílius, et cui volúerit Fílius reveláre. Ut scias autem, quia sicut Fílius Patrem, quibus vult, revélat, étiam Pater revélat, quibus vult, Fílium, audi dicéntem ipsum Dóminum Jesum, cum laudáret Petrum, quod eum Fílium Dei esse conféssus sit : Beátus es Simon BarJona, quia non caro et sanguis revelávit tibi, sed Pater meus, qui in cælis est.
@@ -873,66 +895,11 @@ A cap. fit de sequenti et commem. præcedentis.
 <!-- Where is the commemoration of the preceeding feast? -->
 
 ## Dies Octava S. Alberti.
-<!-- Could not find this feast in the handout -->
-
-### DIE XIV. JULII.
-
-S. Bonaventuræ
-
-Episc. Conf. et Doct.
-Duplex minus.
-
-Omnia de Comm. unius Conf. Pont. [75] exceptis hic signatis.
-
-In j. Vesperis, ad Magnificat, Aña. O Doctor óptime.
-
-Oratio. Deus, qui pópulo, de Comm. Doct. [90]
-
-In primo Nocturno, Lectiones Sapiéntiam ómnium, de Communi Doctorum. [90]
-
-IN SECUNDO NOCTURNO.
-Ex libro Morálium sancti Gregórii Papæ.
-
-Lectio iv. Lib. 9. Cap. 6.
-
-ui post Oríonas hyadum nómine, nisi doctóres sanctæ Ecclésiæ designántur? qui subdúctis Martýribus, eo jam témpore ad mundi notítiam venérunt, quo fides clárius elúcet; et représsa infidelitátis híeme, áltius per corda fidélium sol veritátis calet : qui remóta tempestáte persecutiónis, explétis longis nóctibus infidelitátis, tunc sanctæ Ecclésiæ orti sunt, cum ei jam per credulitátis vernum lucídior annus aperítur.
-
-℟. Pósui adjutórium. [82]
-
-Lectio v.
-
-onaventúra, Balneorégii in Etrúria natus, cum infans incidísset in vitæ perículum, mater ejus vovit, si inde evasísset, se eum religióni beáti Francísci dicatúram. Itaque adoléscens in Ordinem Fratrum Minórum adscríbi vóluit : ubi Alexándro de Ales magístro, ad eam doctrínæ perfectiónem brevi pervénit, ut séptimo post anno libros Sententiárum Parí-
-
-
-Festa Augusti. 693
-
-AD NONAM.
-
-Capítulum. Eccli. 50.
-
-Curávit gentem suam, et liberávit eam a perditióne : adéptus est glóriam in conversatióne gentis.
-
-℟. Justus ut palma florébit. ℣. Justus germinábit. [100]
-
-AD VESPERAS.
-
-Antæ Laudum : Psalmi de Dominica, et loco ultimi Lauda Jerúsalem. 183.
-
-Capit. Hymn. et ℣. ut in j. Vesp.
-
-Ad Magnif. Anta. O Albérte, pater egrégie, semper gaudens de dono grátiæ, te laudántes in terra réspice, et nostra vota cleménter súscipe, allelúia.
-
-Quando dicitur pro com. Oct. ℣. Amávit eum.
-
-Deinde fit com. seq.
-
-Infra Octav. S. Alberti fit de ea com. in Laud. et Vesp. per Antam et ℣. de Laud. et ij. Vesperis, in Dominica vero per Antas de utrisque Vesp. et Laud. Festi.
 
 ## DIE XIV. AUGUSTI.
 
-Octava
-
-S. Alberti
+Octava S. Alberti
+<!-- Not sure about this -->
 
 Duplex minus.
 
@@ -946,7 +913,10 @@ IN SECUNDO NOCTURNO.
 
 Ex libro Morálium sancti Gregórii Papæ.
 
-Lib. 10. cap. 16. in cap. 12. Job. Lectio iv.
+Lib. 10. cap. 16. in cap. 12. Job.
+<!-- Why is the chapter stated twice? -->
+
+Lectio iv.
 
 Sapiéntia justórum est, nil per ostensiónem fingere, sensum verbis aperíre, vera ut sunt, dilígere; falsa devitáre; bona gratis exhibére; mala libéntius toleráre, quam fácere: nullam injúriæ ultiónem quærere, pro veritáte contuméliam lucrum putáre. Sed hæc justórum simplícitas deridétur: quia ab hujus mundi sapiéntibus puritátis virtus fatúitas créditur. Omne enim, quod innocénter ágitur, ab eis procul dúbio stultum putátur; et quidquid in ópere véritas ápprobat, carnáli sapiéntiæ fátuum sonat.
 
@@ -975,6 +945,7 @@ Lectio ix. Cap. II.
 In illo témpore : Loquénte Jesu ad turbas, extóllens vocem quædam múlier de turba dixit illi : Beátus venter, qui te portávit, et úbera, quæ suxísti. Et réliqua.
 
 Homilía sancti Augustíni Epíscopi.
+
 Tract. 10. in Joan.
 
 Beáta Virgo María, quia fecit voluntátem Patris; hoc in ea magnificávit Dóminus, quia fecit voluntátem Patris, non quia caro génuit carnem. Inténdat cáritas vestra. Proptérea cum Dóminus in turba admirábilis viderétur, fáciens signa et prodígia, et osténdens quid latéret in carne, admirátæ quædam ánimæ dixérunt : Felix venter, qui te portávit.
@@ -982,6 +953,8 @@ Beáta Virgo María, quia fecit voluntátem Patris; hoc in ea magnificávit Dóm
 ¶ Et ille : Imo felíces, qui áudiunt verbum Dei, et custódiunt illud. Hoc est dícere : Et mater mea, quam appellátis felícem, inde felix, quia verbum Dei custódit : non quia in illa Verbum caro factum est, sed quia custódit ipsum Verbum Dei, per quod facta est, et quod in illa caro factum est.
 
 ℟. Jesu dulcis.
+
+<!-- Looks like the rest of the feast's text is corrupted -->
 
 In Laud. fit comm. Oct. S. Laurentii. Deinde (nisi Dominica fuerit) fit com. Vigil. per Añam, et ℣. de Laud. Feriæ occurr. ut in Psalterio. quæsumus; ut sua nos defensióne munítos, jucúndos suæ fácias interésse festivitáti. Qui vivis.
 
@@ -1005,7 +978,6 @@ Duplex minus.
 Omnia ut in die 698. exceptis hic signatis.
 
 Oratio.
-
 Excita, Dómine, in Ecclésia tua Spíritum, cui beátus Lauréntius Levíta servívit : ut eódem nos repléti, studeámus amáre, quod amávit, et ópere exercére, quod dócuit. Per Dóminum .... in unitáte ejúsdem Spíritus.
 
 In j. Nocturno, Lect. de Script. occurrente.
@@ -1046,9 +1018,9 @@ Vesp. a cap. seq.
 
 Dominica post Octav. Assumptionis.
 
-Purissimi Cordis Genitricis Dei
+Purissimi Cordis Genitricis Dei Mariae.
 
-Mariae. Duplex majus S. C.
+Duplex majus S. C.
 
 ### AD I. VESPERAS.
 
@@ -1104,10 +1076,9 @@ De Cánticis Canticórum.
 Lectio j. Cap. 4.
 
 Quam pulchra es, amíca mea, quam pulchra es! óculi tui columbárum, absque eo quod intrínsecus latet. Sicut vitta coccínea lábia tua; et elóquium tuum dulce. Sicut fragmen mali púnici, ita genæ tuæ, absque eo quod intrínsecus latet. Sicut turris David collum tuum, quæ ædificáta est cum propugnáculis: mille clypei pendent ex ea, omnis armatúra fórtium. Vulnerásti cor meum, soror mea Sponsa, vulnerásti cor meum in uno oculórum tuórum, et in uno crine colli tui. Favus distíllans lábia tua, Sponsa, mel et lac sub lingua tua. Hortus conclúsus, fons signátus.
+<!-- Why were there line breaks here in this lesson? -->
 
-℣. Deduc me Dómine, in via tua, et ingrédiar in veritáte tua; lætétur cor meum, \* Ut tímeat nomen tuum.
-
-℣. Pone me ut signáculum super cor tuum, ut signáculum super bráchium tuum. Ut tímeat.
+℣. Deduc me Dómine, in via tua, et ingrédiar in veritáte tua; lætétur cor meum, * Ut tímeat nomen tuum. ℣. Pone me ut signáculum super cor tuum, ut signáculum super bráchium tuum. Ut tímeat.
 
 Ben. Nos cum prole pia.
 
@@ -1115,10 +1086,9 @@ Lectio ij. Cap. 5.
 
 Veni in hortum meum soror mea Sponsa: méssui myrrham meam cum aromátibus meis: comédi favum cum melle meo. Vox dilécti mei pulsántis: áperi mihi soror mea, amíca mea, colúmba mea, immaculáta mea, quia caput meum plenum est rore, et cincínni mei guttis nóctium. Surréxi ut aperírem dilécto meo, manus meæ stillavérunt myrrham, et dígiti mei pleni myrrha probatíssima. Apérui dilécto meo, at ille declináverat, atque transíerat. Anima mea liquefácta est, ut locútus est.
 
-℟. In Dómino gaudébo, et exsultábo in Deo Jesu meo: Deus Dóminus fortitúdo mea, \* Super excélsa dedúcet me.
+℟. In Dómino gaudébo, et exsultábo in Deo Jesu meo: Deus Dóminus fortitúdo mea, * Super excélsa dedúcet me. ℣. Læva ejus sub cápite meo, et déxtera illíus amplexábitur me. Super.
 
-℣. Læva ejus sub cápite meo, et déxtera illíus amplexábitur me. Super.
-
+<!-- Need more room for this blessing to seperate it from the above lesson -->
 Bened. Sancta Dei Génitrix.
 
 Lectio iij. Cap. 5. et 6.
@@ -1143,7 +1113,10 @@ Ps. Fundaménta ejus.
 
 ℣. Anima mea liquefácta est. ℟. Ut locútus est diléctus, allelúia.
 
+<!-- Need more room for this blessing to seperate it from the above verse -->
+<!-- Why was this shortened from Bened to Ben? -->
 Ben. Précibus suæ Matris.
+
 Sermo sancti Bernardíni Senénsis.
 
 Ex serm. 9. de Visitat.
@@ -1154,21 +1127,22 @@ Quis mortálium, nisi divíno fretus oráculo, de vera Dei et hóminis Genitríc
 
 ℟. Ego diligéntes me díligo, et qui mane vígilant ad me, invénient me. Mecum sunt divítiæ et glória : * Opes supérbæ et justítia. ℣. Ut ditem diligéntes me, et thesáuros eórum répleam. Opes.
 
+<!-- Need more room for this blessing to seperate it from the above verse -->
+<!-- Why was this shortened from Bened to Ben? -->
 Ben. Jesus Maríæ Fílius.
 
 Lectio v.
 
 De hoc ígitur Corde quasi fornáce divíni ardóris Virgo beáta prótulit verba bona, id est verba ardentíssimæ caritátis. Sicut enim a vase óptimo vino pleno, non potest exíre nisi óptimum vinum : aut sicut a fornáce summi ardóris non egréditur nisi incéndium fervens : sic de Corde Matris Christi exíre non pótuit verbum, nisi summi, summéque divíni amóris, atque ardóris. Septem verba tantum miræ senténtiæ et virtútis a Christi benedictíssima Matre legúntur dicta. Cum Angelo bis tantum locúta est. Cum Elísabeth, bis étiam. Cum Fílio étiam bis. Cum minístris in núptiis semel. Hæc septem verba, secúndum septem amóris actus, sub miro gradu et órdine proláta, quasi sunt septem flammæ Cordis ejus.
 
-℟. Transíte ad me omnes, qui concupíscitis me, et a generatiónibus meis implémini. \* In me grátia omnis viæ et veritátis.
+℟. Transíte ad me omnes, qui concupíscitis me, et a generatiónibus meis implémini. * In me grátia omnis viæ et veritátis. ℣. Qui me invénerit invéniet vitam, et háuriet salútem a Dómino. In me.
 
-℣. Qui me invénerit invéniet vitam, et háuriet salútem a Dómino. In me.
-
+<!-- Need more room for this blessing to seperate it from the above lesson -->
 Ben. Fílius Vírginis.
 
 Lectio vj.
 
-QUæ verba consíderans mens devóta, cum ipso Prophéta ait : Quam dúlcia fáucibus meis, id est ómnibus affectiónibus, elóquia tua! Porro dulcédo hæc quam in verbis beátæ Vírginis devóta mens sentit, est ardor piæ devotiónis quam in eis ánima experimentáliter probat. Distinguámus ígitur per órdinem has septem flammas amóris verbórum Vírginis benedíctæ. Prima est flamma amóris separántis. Secúnda amóris transformántis. Tértia amóris communicántis. Quarta amóris jubilántis. Quinta amóris soporántis. Sexta amóris compatiéntis. Séptima amóris consummántis.
+Quæ verba consíderans mens devóta, cum ipso Prophéta ait : Quam dúlcia fáucibus meis, id est ómnibus affectiónibus, elóquia tua! Porro dulcédo hæc quam in verbis beátæ Vírginis devóta mens sentit, est ardor piæ devotiónis quam in eis ánima experimentáliter probat. Distinguámus ígitur per órdinem has septem flammas amóris verbórum Vírginis benedíctæ. Prima est flamma amóris separántis. Secúnda amóris transformántis. Tértia amóris communicántis. Quarta amóris jubilántis. Quinta amóris soporántis. Sexta amóris compatiéntis. Séptima amóris consummántis.
 
 ℟. Beátus homo, qui audit me, et qui vígilat ad fores meas quotídie et obsérvat ad postes óstii mei. * Qui me invénerit invéniet vitam, et háuriet salútem a Dómino. ℣. Qui autem in me peccáverit lædet ánimam suam; omnes qui me odérunt, díligunt mortem. Qui me. Glória Patri. Qui me.
 
@@ -1186,14 +1160,14 @@ Aña. Suscépit Israel púerum suum, recordátus misericórdiæ suæ.
 
 Ps. Cantáte Dómino.
 
-℣. Ego dilécto meo. ℟. Et ad me convérsio ejus, allel.
+℣. Ego dilécto meo. ℟. Et ad me convérsio ejus, allelúja.
 Ben. Fons Evangélii.
 
 Léctio sancti Evangélii secúndum Lucam.
 
 Léctio vij. Cap. 2.
 
-IN illo témpore : Dixit Mater Jesu ad illum : Fili quid fecísti nobis sic? Ecce pater tuus et ego doléntes quærebámus te. Et réliqua.
+In illo témpore : Dixit Mater Jesu ad illum : Fili quid fecísti nobis sic? Ecce pater tuus et ego doléntes quærebámus te. Et réliqua.
 
 De Homilía Venerábilis Bedæ Presbyteri.
 
@@ -1203,6 +1177,7 @@ Mater ejus, inquit Evangelísta, conservábat ómnia verba hæc in Corde suo. Om
 
 ℟. Aquæ multæ non potuérunt exstínguere caritátem : * Neque flúmina óbruent eam. ℣. Si déderit homo omnem substántiam domus suæ pro dilectióne, quasi nihil despíciet eam. Neque flúmina.
 
+<!-- Again, need more space for this blessing to seperate it from the above lesson -->
 Ben. Ab hoste malígno.
 
 Lectio viij.
@@ -1215,16 +1190,11 @@ Horum Dómini verbórum et actórum meditatióne diúrna et noctúrna importúno
 
 Bened. Verba Redemptóris.
 
-Lectio ix. de Hom. Dom. occurrentis; sed si Festum transfertur, et tres Lectiones de eodem dici debent, Lectio octava dividátur in octavam et nonam; et ante Lect. ix. dic. Ben. In omni tribulatióne.
-
-℟. ix. Ego Mater pulchræ dilectiónis et timóris et agnitiónis et sanctæ spei : * In me grátia omnis viæ et veritátis.
-
-℣. In me omnis spes vitæ et virtútis. In me. Glória Patri. In me.
+℟. ix. Ego Mater pulchræ dilectiónis et timóris et agnitiónis et sanctæ spei : * In me grátia omnis viæ et veritátis. ℣. In me omnis spes vitæ et virtútis. In me. Glória Patri. In me.
 
 Te Deum laudámus. 20.
 
-Sacerd. ℣. Viam mandatórum tuórum cucúrri.
-℟. Cum dilatásti Cor meum, allelúia.
+Sacerd. ℣. Viam mandatórum tuórum cucúrri. ℟. Cum dilatásti Cor meum, allelúia.
 
 ### AD LAUDES
 
@@ -1262,7 +1232,9 @@ Et fit comm. Domin. occurrentis.
 
 ### AD TERTIAM.
 
-Capit. Pone me, ut supra ad Laudes.
+Capit.
+
+Pone me, ut supra ad Laudes.
 
 ℟. Exsúlta in omni corde fília Jerúsalem, * Allelúia, allelúia. Exsúlta. ℣. Rex Israel Dóminus in médio tui. Allelúia, allelúia. Glória Patri. Exsúlta.
 
@@ -1412,9 +1384,9 @@ Lectiones de Scriptura occurrente.
 
 ℟. j. Contínua abstinéntia, jejúniis et vigíliis se macerábat Angelus, * Ut corpus in servitútem spíritus redígeret. ℣. Férrea semper intérula nudam carnem tegébat. Ut corpus.
 
-℟. ij. Angelus ad Jordánem convérsus dixit : O flumen sanctum, a Dómino nostro in Baptísmo sanctificátum, cursum tuum siste : \* Per signum, quod in te operátus est sanctus Pater Elías. ℣. Tunc stetérunt aquæ, et sicco pede cum sóciis tránsiit. Per signum.
+℟. ij. Angelus ad Jordánem convérsus dixit : O flumen sanctum, a Dómino nostro in Baptísmo sanctificátum, cursum tuum siste : * Per signum, quod in te operátus est sanctus Pater Elías. ℣. Tunc stetérunt aquæ, et sicco pede cum sóciis tránsiit. Per signum.
 
-℞. iij. Angelus ab Angelo Dei ductus in desértum, in quo Christus quadragínta diébus jejunávit, quinquénnium látuit, \* In oratióne et pœniténtia. ℣. In solitúdine toto afféctu Christo adhærére, Christum imitári studébat. In oratióne. Glória Patri. In.
+℟. iij. Angelus ab Angelo Dei ductus in desértum, in quo Christus quadragínta diébus jejunávit, quinquénnium látuit, * In oratióne et pœniténtia. ℣. In solitúdine toto afféctu Christo adhærére, Christum imitári studébat. In oratióne. Glória Patri. In.
 
 IN SECUNDO NOCTURNO.
 
@@ -1442,12 +1414,12 @@ Lectio v.
 
 Et dum versículum : In manus tuas, Dómine, comméndo spíritum meum, recitáret, vox de cælo insónuit : Veni Angele, áccipe perénnis glóriæ corónam : statímque ex córpore, splendidíssima luce illustráto, ánima illíus in colúmbæ spécie ad cælum, modulántibus Angelórum choris, evoláre visa est. Corpus vero suavíssimum spirans odórem, octo diébus fidélium veneratióni expósitum pátuit; ad quod accedéntes surdi audítu, cæci visu, leprósi mundítia, paralytici sospitáte donáti sunt. Persolútis solémnibus exséquiis, Godfrédus Panormitánus Archiepíscopus (cui sanctus Angelus sanitátem miraculóse restitúerat, et in visióne id commendárat) corpus honorífice sepelíri curávit : ex quo repénte pulchrum lílium germinávit, quod quóties recísum fuit, tóties renásci visum est. Hoc miráculo permóti Leocaténses, lóculum effodérunt, et corpus fragrantíssimum spirans odórem in arca auro decoráta reposuérunt.
 
-℟. Oránte sancto Angelo trecénti infidéles óculis capti sunt, * Et póstea visum recepérunt. ℣. Quicúmque vestrum, dixit Angelus, credet in Jesum Christum, spíritus et córporis lumen recípiet. Et 
+℟. Oránte sancto Angelo trecénti infidéles óculis capti sunt, * Et póstea visum recepérunt.
+℣. Quicúmque vestrum, dixit Angelus, credet in Jesum Christum, spíritus et córporis lumen recípiet. Et postéa.
 
 Lectio vj.
 
 Ex loco vero, ubi corpus prius jacúerat, fons vivus aquæ limpidíssimæ, et mirífici odóris scaturívit : nec non ex ea parte, qua caput Mártyris requiescébat, medicinális ólei liquor cæpit efflúere : ubi póstea manu artíficis aqua illa grádibus lapídeis circúmdata est, quæ anniversário die Mártyris sólito copiósius excrescébat : tuncque étiam óleum a primis vésperis usque ad solis occásum diéi sequéntis effluébat, quod diligentíssime a pópulo colligebátur, eóque plures infírmi sanitátem recuperábant. Rursum anno millésimo sexcentésimo décimo quinto sancti Angeli relíquiæ ex véteri arca in novam argénteam transpósitæ, processionáliter magno pópuli concúrsu, summáque cum celebritáte delátæ sunt, et quátuor púeri ab hérnia liberáti fuérunt : et íterum anno millésimo sexcentésimo sexagésimo secúndo, numeróso comitánte pópulo, grandique cum pietáte ex antíqua Ecclésia ad novam, Leocaténsium cívium eleemósynis eréctam, translátæ fuérunt.
-
 
 ℟. Instar Patris sui Elíæ, Angelus fílium víduæ revocávit ad vitam, * In virtúte passiónis Dómini nostri Jesu Christi. ℣. Scitóte, dixit adoléscens, me sancti Angeli précibus ab utráque morte liberátum. In virtúte. Glória Patri. In virtúte.
 
@@ -1497,30 +1469,24 @@ Te Deum laudámus. 20.
 
 Sacerd. ℣. Stola jucunditátis. [39]
 
+
+
+
 ### AD LAUDES
 
-et per Horas, Aña.
-
-Dómine, testimónia tua credibília sunt nimis, pro quorum veritáte Angelus lætánter martýrium sustínuit.
+et per Horas, Aña. Dómine, testimónia tua credibília sunt nimis, pro quorum veritáte Angelus lætánter martýrium sustínuit.
 
 ℣. Ps. Dóminus regnávit, cum relíquis. 21.
 
 Aña. Scitóte, quóniam Dóminus sanctum Angelum fecit præcónem suum, ut notum fáceret pópulis, quóniam in ætérnum misericórdia ejus.
 
-Aña. In terra desérta Angelus sicut in sancto
+Aña. In terra desérta Angelus sicut in sancto appáruit Dómino, vidit virtútem et glóriam ejus.
 
-<!-- This section has been corrupted -->
-appáruit Dómino, vidit | Carne devícta, meritísque
-virtútem et glóriam ejus. | plenus
-Aña. Benedícite Dómino | Æthera scandit.
-omnes Angeli ejus, miní- | Glóriam Patri, Genitó-
-stri ejus, qui fácitis volun- | que Patris,
-tátem ejus. | Flámini sancto páriter ca-
-Aña. Exaltátum est no- | námus, omnes
-men Angeli, et laudat Dó- | Et piæ Matris celebrémus
-minum in excélsis. | Semper honórem.
+Aña. Benedícite Dómino omnes Angeli ejus, minístri ejus, qui fácitis voluntátem ejus.
 
-Capitulum. Isaie 49.
+Aña. Exaltátum est nomen Angeli, et laudat Dóminum in excélsis.
+
+Capitulum. Isaiæ 49.
 
 Audíte ínsulæ, et atténdite pópuli de longe : Dóminus ab útero vocávit me, de ventre matris meæ recordátus est nóminis mei.
 
@@ -1543,6 +1509,14 @@ Vúlnere cæsus.
 
 Láurea tandem tríplici beátus,
 Martyr et Virgo, paritérque Doctor
+Carne devícta, meritísque plenus
+Æthera scandit.
+
+Glóriam Patri, Genitóque Patris,
+Flámini sancto páriter canámus, [omnes
+Et piæ Matris celebrémus
+Semper honórem.
+
 
 ℣. Magna est glória. [40]
 
@@ -1554,7 +1528,9 @@ Omnípotens et miséricors Deus, qui beátum Angelum pro tuæ veritátis defensi
 
 ### AD TERTIAM.
 
-Capit. Audíte ínsulæ, ut supra ad Laudes.
+Capit.
+
+Audíte ínsulæ, ut supra ad Laudes.
 
 ℟. Glória et honóre, de Communi. [41]
 
@@ -1580,6 +1556,6 @@ Equidem et captívitas a forti tollétur, et quod ablátum fúerit a robústo, s
 
 Añæ Laudum, Ps. de Communi. [41]
 
-A capitulo fit de sequenti, et pro com. præc. dicitur sequens Añia. Ad Dóminum clamávit Angelus, et dixit : Miserére Ecclésiæ tuæ, et avérte iram tuam a pópulo tuo, quem effúsi sánguinis prétio redemísti.
+A capitulo fit de sequenti, et pro com. præc. dicitur sequens Aña. Ad Dóminum clamávit Angelus, et dixit : Miserére Ecclésiæ tuæ, et avérte iram tuam a pópulo tuo, quem effúsi sánguinis prétio redemísti.
 
 ℣. Glória et honóre.
