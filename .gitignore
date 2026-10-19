@@ -3,3 +3,5 @@
 /tesseract/
 *.pdf
 /mvp/raw/*.jpg
+/mvp/fonts/
+/mvp/target/
