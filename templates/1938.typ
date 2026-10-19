@@ -280,7 +280,7 @@
   block(spacing: 0pt, content)
 }
 
-#let rubric(content: "") = hl(size: .8em, content)
+#let rubric(content) = hl(size: .8em, content)
 
 #let sacerdotal_verse(verse: "", response: "", alleluja: 1) = [
   #hl("V.")
@@ -387,3 +387,11 @@
     ),
   )
 }
+
+#let pater_et_ave() = [
+  #hl[(]Pater #hl[et] Ave#hl[)].
+]
+
+#let deus_in_adjutorium() = [
+  #text(hl_color)[℣.] Deus, in adjutórium.
+]
