@@ -27,18 +27,18 @@
 #let red = rgb(224, 53, 48)
 
 #let fonts = (
-  body: "EB Garamond",
+  body: "Plantin",
   // Blackletter for the grand titles.
   black: "Cloister",
   // Black woodcut initials (Psalms 1, 8, 9 iij, 92 …).
   woodcut: "Goudy Initialen",
   // Red two-line versals. The original uses Lombardic capitals; swap this
   // for a Lombardic face when one is chosen.
-  versal: "EB Garamond",
+  versal: "EasyLombardic Two",
   // "DOMINICA": a narrow bold transitional face (Charter Bold is close).
-  day: "EB Garamond",
+  day: "Old Standard TT",
   // "Ad Matutinum": a Clarendon-style slab (Superclarendon is close).
-  hour: "EB Garamond",
+  hour: "Plantin Condensed",
 )
 
 #let sizes = (
@@ -53,7 +53,7 @@
 
 /// Weight of body text. The 1938 printing is inked heavily; EB Garamond
 /// Medium matches its colour better than Regular.
-#let body-weight = 500
+#let body-weight = 400
 /// Weight used for everything printed in red.
 #let red-weight = 600
 
