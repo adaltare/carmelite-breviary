@@ -35,7 +35,7 @@
 ]
 
 #hymn("
-DOcte surgéntes vigilémus omnes,
+NOcte surgéntes vigilémus omnes,
 Semper in psalmis meditémur, atque
 Víribus totis Dómino canámus
 Dúlciter hymnos.
