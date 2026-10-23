@@ -1,0 +1,475 @@
+{
+  "version": "0.0.0",
+  "fragments": [
+    {
+      "type": "part_title",
+      "attributes": {
+        "emblem": "assets/emblem.png",
+        "title": "Psalterium",
+        "subtitle": "Breviarii Ordinis Fratrum",
+        "order": "B. V. Mariae de Monte Carmelo",
+        "description": "Per omnes ac singulos hebdomadæ dies\ndispositum",
+        "day_title": "Dominica"
+      }
+    },
+    {
+      "type": "hour",
+      "text": "Ad Matutinum"
+    },
+    {
+      "type": "pater_ave",
+      "attributes": {
+        "credo": true
+      }
+    },
+    {
+      "type": "v_line",
+      "text": "Dómine, lábia mea."
+    },
+    {
+      "type": "v_line",
+      "text": "Deus, in adjutórium."
+    },
+    {
+      "type": "line_of",
+      "text": "Glória Patri. Sicut erat. Allelúja."
+    },
+    {
+      "type": "invitatory",
+      "attributes": {
+        "season": "Ante Domin. I Novembris :",
+        "ref": {
+          "psalm": 94,
+          "incipit": "Veníte, exsultémus",
+          "page": 2
+        }
+      },
+      "text": "Laudémus Dóminum Jesum Christum : * Quia ipse est Redémptor ómnium sæculórum."
+    },
+    {
+      "type": "invitatory",
+      "attributes": {
+        "season": "In Dominicis Novembris :",
+        "ref": {
+          "psalm": 94,
+          "incipit": "Veníte, exsultémus",
+          "page": 2
+        }
+      },
+      "text": "Dóminum, qui fecit nos : * Veníte, adorémus:"
+    },
+    {
+      "type": "hymn",
+      "attributes": {
+        "amen_line": true
+      },
+      "text": "Nocte surgéntes vigilémus omnes,\nSemper in psalmis meditémur, atque\nVíribus totis Dómino canámus\nDúlciter hymnos.\n\nUt pio Regi páriter canéntes,\nCum suis Sanctis mereámur aulam\nIngredi cæli, simul et beátam\nDúcere vitam.\n\nPræstet hoc nobis Déitas beáta\nPatris, ac Nati, paritérque Sancti\nSpíritus, cujus réboat in omni\nGlória mundo."
+    },
+    {
+      "type": "nocturn",
+      "attributes": {
+        "number": 1,
+        "head": "Dominica ad Matutinum, in I Nocturno"
+      }
+    },
+    {
+      "type": "antiphon",
+      "text": "Pro fídei méritis."
+    },
+    {
+      "type": "rubric",
+      "text": "Antiphonæ cum Psalmis et Versibus assignatæ adhibentur semper, quando fit Officium semiduplex de Dominica."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": "Asteriscus *, in Psalmorum versibus et in aliis Officii partibus insertus, denotat pausam cantus et recitationis in Choro; præter quam in Antiphonis, in quibus nempe significat tum præintonationem Antiphonæ, tum Antiphonam ipsam ante Psalmum seu Canticum eousque producendam esse ad omnes Horas in Officio ritus duplicis minoris, semiduplicis ac simplicis, atque ad Horas tantum minores in omni Officio."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 1",
+        "initial": "woodcut"
+      },
+      "text": "Beátus vir, qui non ábiit in consílio impiórum, et in via peccatórum non stetit, * et in cáthedra pestiléntiæ non sedit :\nSed in lege Dómini volúntas ejus, * et in lege ejus meditábitur die ac nocte.\nEt erit tamquam lignum, quod plantátum est secus decúrsus aquárum, * quod fructum suum dabit in témpore suo :\nEt fólium ejus non défluet : * et ómnia quæcúmque fáciet, prosperabúntur.\nNon sic ímpii, non sic : * sed tamquam pulvis, quem prójicit ventus a fácie terræ.\nIdeo non resúrgent ímpii in judício : * neque peccatóres in concílio justórum.\nQuóniam novit Dóminus viam justórum : * et iter impiórum períbit.\nGlória Patri, et Fílio, * et Spirítui Sancto.\nSicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": [
+        "Hic Versus ",
+        {
+          "blk": "Glória Patri"
+        },
+        " semper dicitur in fine omnium Psalmorum et Canticorum nisi aliter notetur."
+      ]
+    },
+    {
+      "type": "antiphon",
+      "text": "Pro fídei méritis vocitátur jure beátus, legem qui Dómini meditátur nocte, diéque."
+    },
+    {
+      "type": "antiphon",
+      "text": "Juste Deus."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 2",
+        "initial": "versal"
+      },
+      "text": "Quare fremuérunt gentes, * et pópuli meditáti sunt inánia?\nAstitérunt reges terræ, et príncipes convenérunt in unum * advérsus Dóminum, et advérsus Christum ejus.\nDirumpámus víncula eórum : * et projiciámus a nobis jugum ipsórum.\nQui hábitat in cælis, irridébit eos : * et Dóminus subsannábit eos.\nTunc loquétur ad eos in ira sua, * et in furóre suo conturbábit eos.\nEgo autem constitútus sum Rex ab eo super Sion montem sanctum ejus, * prǽdicans præcéptum ejus.\nDóminus dixit ad me : * Fílius meus es tu, ego hódie génui te.\nPóstula a me, et dabo tibi gentes hereditátem tuam, * et possessiónem tuam términos terræ.\nReges eos in virga férrea, * et tamquam vas fíguli confrínges eos.\nEt nunc, reges, intellígite : * erudímini, qui judicátis terram.\nServíte Dómino in timóre : * et exsultáte ei cum tremóre.\nApprehéndite disciplínam, nequándo irascátur Dóminus, * et pereátis de via justa.\nCum exárserit in brevi ira ejus, * beáti omnes qui confídunt in eo."
+    },
+    {
+      "type": "antiphon",
+      "text": "Juste Deus, judex fortis, patiénsque, benígnus : in te sperántes muni miserándo fidéles."
+    },
+    {
+      "type": "antiphon",
+      "text": "Surge."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 3",
+        "initial": "versal"
+      },
+      "text": "Domine, quid multiplicáti sunt qui tríbulant me? * multi insúrgunt advérsum me.\nMulti dicunt ánimæ meæ : * Non est salus ipsi in Deo ejus.\nTu autem, Dómine, suscéptor meus es, * glória mea, et exáltans caput meum.\nVoce mea ad Dóminum clamávi : * et exaudívit me de monte sancto suo.\nEgo dormívi, et soporátus sum : * et exsurréxi, quia Dóminus suscépit me.\nNon timébo míllia pópuli circumdántis me : * exsúrge, Dómine, salvum me fac, Deus meus.\nQuóniam tu percussísti omnes adversántes mihi sine causa : * dentes peccatórum contrivísti.\nDómini est salus : * et super pópulum tuum benedíctio tua."
+    },
+    {
+      "type": "antiphon",
+      "text": "Surge, et in ætérnum serva munímine sacro, custodíque tuos, Astrípotens, fámulos."
+    },
+    {
+      "type": "versicle",
+      "text": {
+        "versicle": "Memor fui nocte nóminis tui, Dómine.",
+        "response": "Et custodívi legem tuam."
+      }
+    },
+    {
+      "type": "nocturn",
+      "attributes": {
+        "number": 2,
+        "head": "Dominica ad Matutinum, in II Nocturno"
+      }
+    },
+    {
+      "type": "antiphon",
+      "text": "Natúræ Génitor."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 8",
+        "initial": "woodcut"
+      },
+      "text": "Domine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra!\nQuóniam eleváta est magnificéntia tua, * super cælos.\nEx ore infántium et lacténtium perfecísti laudem propter inimícos tuos, * ut déstruas inimícum et ultórem.\nQuóniam vidébo cælos tuos, ópera digitórum tuórum : * lunam et stellas, quæ tu fundásti.\nQuid est homo, quod memor es ejus? * aut fílius hóminis, quóniam vísitas eum?\nMinuísti eum paulo minus ab Angelis, glória et honóre coronásti eum : * et constituísti eum super ópera mánuum tuárum.\nOmnia subjecísti sub pédibus ejus, * oves et boves univérsas : ínsuper et pécora campi.\nVólucres cæli, et pisces maris, * qui perámbulant sémitas maris.\nDómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra!"
+    },
+    {
+      "type": "antiphon",
+      "text": "Natúræ Génitor, consérva a morte redémptos, facque tuo dignos servítio fámulos."
+    },
+    {
+      "type": "antiphon",
+      "text": "Péctora nostra."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 9, j",
+        "initial": "versal"
+      },
+      "text": "Confitébor tibi, Dómine, in toto corde meo : * narrábo ómnia mirabília tua.\nLætábor et exsultábo in te : * psallam nómini tuo, Altíssime,\nIn converténdo inimícum meum retrórsum : * infirmabúntur, et períbunt a fácie tua.\nQuóniam fecísti judícium meum et causam meam : * sedísti super thronum, qui júdicas justítiam.\nIncrepásti gentes, et périit ímpius : * nomen eórum delésti in ætérnum, et in sǽculum sǽculi.\nInimíci defecérunt frámeæ in finem : * et civitátes eórum destruxísti.\nPériit memória eórum cum sónitu : * et Dóminus in ætérnum pérmanet.\nParávit in judício thronum suum : * et ipse judicábit orbem terræ in æquitáte, judicábit pópulos in justítia.\nEt factus est Dóminus refúgium páuperi : * adjútor in opportunitátibus, in tribulatióne.\nEt sperent in te qui novérunt nomen tuum : * quóniam non dereliquísti quæréntes te, Dómine."
+    },
+    {
+      "type": "antiphon",
+      "text": "Péctora nostra tibi tu, Cónditor orbis, adúre, igne pio purgans, atque cremándo probans."
+    },
+    {
+      "type": "antiphon",
+      "text": "Tu pópulum."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 9, ij",
+        "initial": "versal"
+      },
+      "text": "Psállite Dómino, qui hábitat in Sion : * annuntiáte inter gentes stúdia ejus :\nQuóniam requírens sánguinem eórum recordátus est : * non est oblítus clamórem páuperum.\nMiserére mei, Dómine : * vide humilitátem meam de inimícis meis.\nQui exáltas me de portis mortis, * ut annúntiem omnes laudatiónes tuas in portis fíliæ Sion.\nExsultábo in salutári tuo : * infíxæ sunt gentes in intéritu, quem fecérunt.\nIn láqueo isto, quem abscondérunt, * comprehénsus est pes eórum.\nCognoscétur Dóminus judícia fáciens : * in opéribus mánuum suárum comprehénsus est peccátor.\nConvertántur peccatóres in inférnum, * omnes gentes quæ obliviscúntur Deum.\nQuóniam non in finem oblívio erit páuperis : * patiéntia páuperum non períbit in finem.\nExsúrge, Dómine, non confortétur homo : * judicéntur gentes in conspéctu tuo.\nConstítue, Dómine, legislatórem super eos : * ut sciant gentes quóniam hómines sunt."
+    },
+    {
+      "type": "antiphon",
+      "text": "Tu pópulum húmilem salvásti ex hoste, Redémptor : atque supérba tuo colla premis jáculo."
+    },
+    {
+      "type": "versicle",
+      "attributes": {
+        "newline": true
+      },
+      "text": {
+        "versicle": "Média nocte surgébam.",
+        "response": "Ad confiténdum nómini tuo, Dómine."
+      }
+    },
+    {
+      "type": "nocturn",
+      "attributes": {
+        "number": 3,
+        "head": "Dominica ad Matutinum, in III Nocturno"
+      }
+    },
+    {
+      "type": "antiphon",
+      "text": "Sponsus."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 9, iij",
+        "initial": "woodcut"
+      },
+      "text": "Ut quid, Dómine, recessísti longe, * déspicis in opportunitátibus, in tribulatióne?\nDum supérbit ímpius, incénditur pauper : * comprehendúntur in consíliis quibus cógitant.\nQuóniam laudátur peccátor in desidériis ánimæ suæ : * et iníquus benedícitur.\nExacerbávit Dóminum peccátor, * secúndum multitúdinem iræ suæ non quæret.\nNon est Deus in conspéctu ejus : * inquinátæ sunt viæ illíus in omni témpore.\nAuferúntur judícia tua a fácie ejus : * ómnium inimicórum suórum dominábitur.\nDixit enim in corde suo : * Non movébor a generatióne in generatiónem sine malo.\nCujus maledictióne os plenum est, et amaritúdine, et dolo : * sub lingua ejus labor et dolor.\nSedet in insídiis cum divítibus in occúltis, * ut interfíciat innocéntem.\nOculi ejus in páuperem respíciunt : * insidiátur in abscóndito, quasi leo in spelúnca sua.\nInsidiátur ut rápiat páuperem : * rápere páuperem, dum áttrahit eum.\nIn láqueo suo humiliábit eum : * inclinábit se, et cadet, cum dominátus fúerit páuperum.\nDixit enim in corde suo : Oblítus est Deus, * avértit fáciem suam ne vídeat in finem."
+    },
+    {
+      "type": "antiphon",
+      "text": "Sponsus ut e thálamo, procéssit Christus in orbem : descéndens cælo jure salutífero."
+    },
+    {
+      "type": "antiphon",
+      "text": "Auxílium nobis."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 9, iv",
+        "initial": "versal"
+      },
+      "text": "Exsúrge, Dómine Deus, exaltétur manus tua : * ne obliviscáris páuperum.\nPropter quid irritávit ímpius Deum? * dixit enim in corde suo : Non requíret.\nVides quóniam tu labórem et dolórem consíderas : * ut tradas eos in manus tuas.\nTibi derelíctus est pauper : * órphano tu eris adjútor.\nCóntere bráchium peccatóris et malígni : * quærétur peccátum illíus, et non inveniétur.\nDóminus regnábit in ætérnum, et in sǽculum sǽculi : * períbitis, gentes, de terra illíus.\nDesidérium páuperum exaudívit Dóminus : * præparatiónem cordis eórum audívit auris tua.\nJudicáre pupíllo et húmili, * ut non appónat ultra magnificáre se homo super terram."
+    },
+    {
+      "type": "antiphon",
+      "text": "Auxílium nobis, Salvátor, mitte salútis : et tríbuas vitam témpore perpétuo."
+    },
+    {
+      "type": "antiphon",
+      "text": "Rex sine fine manens."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 10",
+        "initial": "versal"
+      },
+      "text": "In Dómino confído : quómodo dícitis ánimæ meæ : * Tránsmigra in montem sicut passer?\nQuóniam ecce peccatóres intendérunt arcum, paravérunt sagíttas suas in pháretra, * ut sagíttent in obscúro rectos corde.\nQuóniam quæ perfecísti, destruxérunt : * justus autem quid fecit?\nDóminus in templo sancto suo, * Dóminus in cælo sedes ejus :\nOculi ejus in páuperem respíciunt : * pálpebræ ejus intérrogant fílios hóminum.\nDóminus intérrogat justum et ímpium : * qui autem díligit iniquitátem, odit ánimam suam.\nPluet super peccatóres láqueos : * ignis, et sulphur, et spíritus procellárum pars cálicis eórum.\nQuóniam justus Dóminus, et justítias diléxit : * æquitátem vidit vultus ejus."
+    },
+    {
+      "type": "antiphon",
+      "text": "Rex sine fine manens, míseris tu parce ruínis : prǽmia concédens, et tua cuncta regens."
+    },
+    {
+      "type": "versicle",
+      "text": {
+        "versicle": "Exaltáre, Dómine, in virtúte tua.",
+        "response": "Cantábimus, et psallémus virtútes tuas."
+      }
+    },
+    {
+      "type": "versicle",
+      "attributes": {
+        "prefix": "Sacerd."
+      },
+      "text": {
+        "versicle": "Excélsus super omnes gentes Dóminus.",
+        "response": "Et super cælos glória ejus."
+      }
+    },
+    {
+      "type": "double_rule"
+    },
+    {
+      "type": "hour",
+      "attributes": {
+        "head": "Dominica ad Laudes"
+      },
+      "text": "Ad Laudes"
+    },
+    {
+      "type": "pater_ave",
+      "attributes": {
+        "silent": true
+      }
+    },
+    {
+      "type": "v_line",
+      "text": "Deus, in adjutórium."
+    },
+    {
+      "type": "antiphon",
+      "text": "Allelúja."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": "Antiphonæ cum Psalmis assignatæ adhibentur semper, quando fit Officium semiduplex de Dominica."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 92",
+        "initial": "woodcut"
+      },
+      "text": "Dominus regnávit, decórem indútus est : * indútus est Dóminus fortitúdinem, et præcínxit se.\nEtenim firmávit orbem terræ, * qui non commovébitur.\nParáta sedes tua ex tunc : * a sǽculo tu es.\nElevavérunt flúmina, Dómine : * elevavérunt flúmina vocem suam.\nElevavérunt flúmina fluctus suos, * a vócibus aquárum multárum.\nMirábiles elatiónes maris : * mirábilis in altis Dóminus.\nTestimónia tua credibília facta sunt nimis : * domum tuam decet sanctitúdo, Dómine, in longitúdinem diérum."
+    },
+    {
+      "type": "antiphon",
+      "text": "Allelúja, Dóminus regnávit, decórem índuit, allelúja, allelúja."
+    },
+    {
+      "type": "antiphon",
+      "text": "Jubiláte. †"
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": "Et non repetitur in Psalmo; quod semper fit, quando Antiphona incipit a primis Psalmi vel Cantici verbis."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 99",
+        "initial": "versal"
+      },
+      "text": "Jubiláte † Deo, omnis terra : * servíte Dómino in lætítia.\nIntroíte in conspéctu ejus, * in exsultatióne.\nScitóte quóniam Dóminus ipse est Deus : * ipse fecit nos, et non ipsi nos.\nPópulus ejus, et oves páscuæ ejus : * introíte portas ejus in confessióne, átria ejus in hymnis : confitémini illi.\nLaudáte nomen ejus : quóniam suávis est Dóminus, in ætérnum misericórdia ejus, * et usque in generatiónem et generatiónem véritas ejus."
+    },
+    {
+      "type": "antiphon",
+      "text": "Jubiláte Deo, omnis terra, allelúja."
+    },
+    {
+      "type": "antiphon",
+      "text": "Benedícam te."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 62",
+        "initial": "versal"
+      },
+      "text": "Deus, Deus meus, * ad te de luce vígilo.\nSitívit in te ánima mea, * quam multiplíciter tibi caro mea.\nIn terra desérta, et ínvia, et inaquósa : * sic in sancto appárui tibi, ut vidérem virtútem tuam, et glóriam tuam.\nQuóniam mélior est misericórdia tua super vitas : * lábia mea laudábunt te.\nSic benedícam te in vita mea : * et in nómine tuo levábo manus meas.\nSicut ádipe et pinguédine repleátur ánima mea : * et lábiis exsultatiónis laudábit os meum.\nSi memor fui tui super stratum meum, in matutínis meditábor in te : * quia fuísti adjútor meus.\nEt in velaménto alárum tuárum exsultábo, adhǽsit ánima mea post te : * me suscépit déxtera tua.\nIpsi vero in vanum quæsiérunt ánimam meam, introíbunt in inferióra terræ : * tradéntur in manus gládii, partes vúlpium erunt.\nRex vero lætábitur in Deo, laudabúntur omnes qui jurant in eo : * quia obstrúctum est os loquéntium iníqua."
+    },
+    {
+      "type": "antiphon",
+      "text": "Benedícam te in vita mea, Dómine : et in nómine tuo levábo manus meas, allelúja."
+    },
+    {
+      "type": "antiphon",
+      "text": "Tres púeri."
+    },
+    {
+      "type": "canticle",
+      "attributes": {
+        "heading": "Canticum trium Puerorum",
+        "ref": "Dan. 3, 57-88 et 56",
+        "initial": "versal"
+      },
+      "text": "Benedícite, ómnia ópera Dómini, Dómino : * laudáte et superexaltáte eum in sǽcula.\nBenedícite, Angeli Dómini, Dómino : * benedícite, cæli, Dómino.\nBenedícite, aquæ omnes, quæ super cælos sunt, Dómino : * benedícite, omnes virtútes Dómini, Dómino.\nBenedícite, sol et luna, Dómino : * benedícite, stellæ cæli, Dómino.\nBenedícite, omnis imber et ros, Dómino : * benedícite, omnes spíritus Dei, Dómino.\nBenedícite, ignis et æstus, Dómino : * benedícite, frigus et æstus, Dómino.\nBenedícite, rores et pruína, Dómino : * benedícite, gelu et frigus, Dómino.\nBenedícite, glácies et nives, Dómino : * benedícite, noctes et dies, Dómino.\nBenedícite, lux et ténebræ, Dómino : * benedícite, fúlgura et nubes, Dómino.\nBenedícat terra Dóminum : * laudet et superexáltet eum in sǽcula.\nBenedícite, montes et colles, Dómino : * benedícite, univérsa germinántia in terra, Dómino.\nBenedícite, fontes, Dómino : * benedícite, mária et flúmina, Dómino.\nBenedícite, cete, et ómnia, quæ movéntur in aquis, Dómino : * benedícite, omnes vólucres cæli, Dómino.\nBenedícite, omnes béstiæ et pécora, Dómino : * benedícite, fílii hóminum, Dómino.\nBenedícat Israel Dóminum : * laudet et superexáltet eum in sǽcula.\nBenedícite, sacerdótes Dómini, Dómino : * benedícite, servi Dómini, Dómino.\nBenedícite, spíritus, et ánimæ justórum, Dómino : * benedícite, sancti, et húmiles corde, Dómino.\nBenedícite, Ananía, Azaría, Mísael, Dómino : * laudáte et superexaltáte eum in sǽcula.\nBenedicámus Patrem et Fílium cum Sancto Spíritu : * laudémus et superexaltémus eum in sǽcula.\nBenedíctus es, Dómine, in firmaménto cæli : * et laudábilis, et gloriósus, et superexaltátus in sǽcula."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": [
+        "Hic non dicitur ",
+        {
+          "blk": "Glória Patri,"
+        },
+        " neque ",
+        {
+          "blk": "Amen."
+        }
+      ]
+    },
+    {
+      "type": "antiphon",
+      "text": "Tres púeri jussu regis in fornácem missi sunt, non timéntes flammam ignis, dicéntes : Benedíctus Deus, allelúja."
+    },
+    {
+      "type": "antiphon",
+      "text": "Allelúja."
+    },
+    {
+      "type": "psalm",
+      "attributes": {
+        "heading": "Psalmus 148",
+        "initial": "versal"
+      },
+      "text": "Laudáte Dóminum de cælis : * laudáte eum in excélsis.\nLaudáte eum, omnes Angeli ejus : * laudáte eum, omnes virtútes ejus.\nLaudáte eum, sol et luna : * laudáte eum, omnes stellæ et lumen.\nLaudáte eum, cæli cælórum : * et aquæ omnes, quæ super cælos sunt, laudent nomen Dómini.\nQuia ipse dixit, et facta sunt : * ipse mandávit, et creáta sunt.\nStátuit ea in ætérnum, et in sǽculum sǽculi : * præcéptum pósuit, et non præteríbit.\nLaudáte Dóminum de terra, * dracónes, et omnes abýssi.\nIgnis, grando, nix, glácies, spíritus procellárum : * quæ fáciunt verbum ejus :\nMontes, et omnes colles : * ligna fructífera, et omnes cedri.\nBéstiæ, et univérsa pécora : * serpéntes, et vólucres pennátæ :\nReges terræ, et omnes pópuli : * príncipes, et omnes júdices terræ.\nJúvenes, et vírgines : senes cum junióribus laudent nomen Dómini : * quia exaltátum est nomen ejus solíus.\nConféssio ejus super cælum et terram : * et exaltávit cornu pópuli sui.\nHymnus ómnibus sanctis ejus : * fíliis Israel, pópulo appropinquánti sibi."
+    },
+    {
+      "type": "antiphon",
+      "text": "Allelúja, laudáte Dóminum de cælis, allelúja, allelúja."
+    },
+    {
+      "type": "capitulum",
+      "attributes": {
+        "ref": "Apoc. 7, 12"
+      },
+      "text": "Benedíctio, et cláritas, et sapiéntia, et gratiárum áctio, honor, et virtus, et fortitúdo Deo nostro in sǽcula sæculórum. Amen."
+    },
+    {
+      "type": "r_line",
+      "text": "Deo grátias."
+    },
+    {
+      "type": "hymn",
+      "attributes": {
+        "amen_line": true
+      },
+      "text": "Ecce, jam noctis tenuátur umbra,\nLucis auróra rútilans corúscat :\nNísibus totis rogitémus omnes\nCunctipoténtem.\n\nUt Deus nostri miserátus, omnem\nPellat languórem, tríbuat salútem,\nDonet et nobis, pietáte Patris,\nRegna polórum.\n\nPræstet hoc nobis Déitas beáta\nPatris, ac Nati, paritérque Sancti\nSpíritus, cujus réboat in omni\nGlória mundo."
+    },
+    {
+      "type": "versicle",
+      "attributes": {
+        "newline": true
+      },
+      "text": {
+        "versicle": "Dóminus regnávit.",
+        "response": "Decórem índuit."
+      }
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "size": "large"
+      },
+      "text": "Antiphona ad Benedictus et Oratio ut in Proprio de Tempore."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "size": "large"
+      },
+      "text": "Reliqua ut in Ordinario II."
+    },
+    {
+      "type": "rubric",
+      "attributes": {
+        "mark": "¶"
+      },
+      "text": "Psalmi cum Cantico de Dominica superius appositi dicuntur etiam, sub Antiphonis Officio diei congruentibus, in Duplicibus majoribus I vel II classis, in Festis novem Lectionum Domini, B. Mariæ Virginis, Angelorum, S. Joannis Baptistæ, S. Joseph, Apostolorum, Evangelistarum, per Octavas privilegiatas et in earum Dominicis, itemque in"
+    },
+    {
+      "type": "end_columns"
+    }
+  ]
+}

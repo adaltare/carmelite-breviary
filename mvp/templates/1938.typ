@@ -12,6 +12,7 @@
 //    5. Initials    woodcut and red versal drop capitals
 //    6. Blocks      psalm, canticle, hymn, capitulum, invitatory, rubric
 //    7. Page        page geometry, running head, two-column frame, title page
+//    8. Master copy render a JSON master copy through the blocks above
 //
 //  A document only needs `setup` plus layers 3–7. Everything typographic is
 //  driven by the tokens in layer 1 so the whole book can be retuned in one
@@ -131,9 +132,16 @@
 
 /// "℣. … ℟. …". With `newline: true` the response starts a new, flush line.
 /// `prefix` adds a red label before the versicle, e.g. "Sacerd.".
-#let versicle(v, resp, prefix: none, newline: false) = line-of(label: prefix)[
-  #V #v#if newline { linebreak() } else [ ]#R #resp
-]
+/// The parts are given as `[…][…]` or as one `(versicle: …, response: …)`.
+#let versicle(prefix: none, newline: false, ..parts) = {
+  let (v, resp) = if parts.pos().len() == 1 {
+    let d = parts.pos().first()
+    (d.versicle, d.response)
+  } else { parts.pos() }
+  line-of(label: prefix)[
+    #V #v#if newline { linebreak() } else [ ]#R #resp
+  ]
+}
 
 /// A lone versicle "℣. …".
 #let v-line(body) = line-of[#V #body]
@@ -188,12 +196,13 @@
 }
 
 /// "IN I NOCTURNO" — small spaced capitals.
-#let nocturn(n, head: none) = {
+#let nocturn(number: none, head: none) = {
+  assert(number != none, message: "nocturn needs a number")
   if head != none { running-head(head) }
   block(width: 100%, above: 0.8em, below: 0.25em, sticky: true, align(center, text(
     size: sizes.nocturn,
     tracking: 0.08em,
-    upper[In #numbering("I", n) Nocturno],
+    upper[In #numbering("I", number) Nocturno],
   )))
 }
 
@@ -227,10 +236,15 @@
 ///         "inline"   first letter in red at text size (later hymn stanzas)
 ///         none       no initial
 ///
-/// The text should be written as printed: the letter after the initial is
-/// a capital ("DOmine", "BEátus").
+/// The letter after the initial is printed as a capital ("DOmine",
+/// "BEátus"). Write it so in markup; a string may be written normally
+/// ("Dómine") and has the capital restored here.
 #let initial(style: "versal", lines: auto, body) = {
   if style == none { return body }
+  if style != "inline" and type(body) == str and body.clusters().len() > 1 {
+    let cs = body.clusters()
+    body = cs.first() + upper(cs.at(1)) + cs.slice(2).join()
+  }
   if style == "inline" {
     // Colour the first character only.
     let s = if type(body) == str { body } else { body.text }
@@ -271,26 +285,44 @@
 // =====================================================================
 
 /// Body of a psalm or canticle: first verse with an initial, the rest as
-/// indented verses. Verses are separated by blank lines in the source.
+/// indented verses. Verses are separated by blank lines in markup, or by
+/// "\n" in a string.
 #let verses(initial-style: "versal", body) = {
-  let (first, rest) = split-first-par(body)
+  let (first, rest) = if type(body) == str {
+    let vs = body.split("\n")
+    (vs.first(), vs.slice(1).map(v => [#v]).join(parbreak()))
+  } else { split-first-par(body) }
   block(above: 0.25em, below: leading-for(pitch) - bottom-edge, initial(style: initial-style, first))
   if rest != none { lines(rest) }
 }
 
 /// A psalm: red title + verses.
-///   #psalm("Psalmus 1", initial: "woodcut")[BEátus vir … \* et …]
-#let psalm(heading, sub: none, initial: "versal", body) = {
-  title(heading, sub: sub)
+///   #psalm(heading: [Psalmus 1], initial: "woodcut")[BEátus vir … \* et …]
+#let psalm(heading: none, sub: none, initial: "versal", body) = {
+  if heading != none { title(heading, sub: sub) }
   verses(initial-style: initial, body)
 }
 
 /// A canticle is a psalm with a source reference.
-#let canticle(heading, ref, initial: "versal", body) = psalm(heading, sub: ref, initial: initial, body)
+#let canticle(heading: none, ref: none, initial: "versal", body) = psalm(
+  heading: heading,
+  sub: ref,
+  initial: initial,
+  body,
+)
+
+/// Black words inside a rubric (e.g. the incipit "Glória Patri").
+#let blk(body) = text(fill: black, weight: body-weight, size: sizes.rubric + 0.4pt, body)
 
 /// A rubric: small red text, first line indented. `mark` prefixes a black
-/// pilcrow (¶) or another sign (❦). Use `blk[…]` for words printed black.
+/// pilcrow (¶) or another sign (❦). Use `blk[…]` for words printed black;
+/// a master copy gives the body as a list of strings and `(blk: "…")`.
+/// `size: "large"` is the slightly larger rubric closing an hour.
 #let rubric(mark: none, size: sizes.rubric, body) = block(above: 0.45em, below: 0.4em, {
+  let size = if size == "large" { sizes.rubric + 0.4pt } else { size }
+  let body = if type(body) == array {
+    body.map(run => if type(run) == str { run } else { blk(run.blk) }).join()
+  } else { body }
   set text(size: size, fill: red, weight: red-weight)
   set par(leading: leading-for(rubric-pitch), spacing: leading-for(rubric-pitch))
   line-of({
@@ -298,9 +330,6 @@
     body
   })
 })
-
-/// Black words inside a rubric (e.g. the incipit "Glória Patri").
-#let blk(body) = text(fill: black, weight: body-weight, size: sizes.rubric + 0.4pt, body)
 
 /// A hymn. Pass a string: stanzas separated by blank lines, verse lines by
 /// newlines. The first stanza gets a red versal, later stanzas a red first
@@ -316,7 +345,7 @@
       for (li, l) in verse-lines.enumerate() {
         let is-short = short-last and li == verse-lines.len() - 1
         let content = if li > 0 { [#l] } else if si == 0 {
-          initial(style: "versal", [#l])
+          initial(style: "versal", l)
         } else { initial(style: "inline", l) }
         if li == 0 and si == 0 { content } else if is-short {
           par(first-line-indent: (amount: hymn-short, all: true), content)
@@ -328,7 +357,7 @@
 }
 
 /// Capitulum: red "Capitulum ……… Ref." line, then the text with a versal.
-#let capitulum(ref, body) = {
+#let capitulum(ref: none, body) = {
   block(width: 100%, above: 0.6em, below: 0.2em, sticky: true, text(size: sizes.title, fill: red, weight: red-weight)[
     Capitulum #h(1fr) #ref#h(0.2em)
   ])
@@ -339,7 +368,9 @@
 #let psalm-ref(num, incipit, page) = [#r[Ps. #num] #incipit #r[#page.]]
 
 /// Invitatory: red seasonal rubric then "Invitat. …" with red pause marks.
-#let invitatory(season: none, body) = {
+/// `ref: (psalm: 94, incipit: "Veníte, exsultémus", page: 2)` appends the
+/// psalm reference (or write `#psalm-ref` into the body).
+#let invitatory(season: none, ref: none, body) = {
   if season != none {
     block(above: 0.45em, below: 0.1em, sticky: true, line-of(text(
       size: sizes.rubric + 0.3pt,
@@ -349,7 +380,10 @@
     )))
   }
   show "*": pause(fill: red)
-  line-of(label: "Invitat.", body)
+  line-of(label: "Invitat.", {
+    body
+    if ref != none [ #psalm-ref(ref.psalm, ref.incipit, ref.page)]
+  })
 }
 
 // =====================================================================
@@ -426,9 +460,15 @@
 /// margin) while the following content keeps flowing below it.
 #let raised(rise, body) = pad(top: -rise, body)
 
+/// Resolve a master-copy path. Relative paths are taken from the project
+/// root (the folder of the main document unless `--root` is given), not
+/// from this template's folder.
+#let master-path(path) = if path.starts-with("/") { path } else { "/" + path }
+
 /// Title page block for a major part of the book: woodcut emblem,
 /// blackletter title, order name and description, red double rule and
 /// the title of the first day. The block rises into the top margin.
+/// `emblem` is content or an image path (see `master-path`).
 #let part-title(
   emblem: none,
   title: [],
@@ -444,6 +484,7 @@
   // `gap` is the distance between consecutive baselines.
   let row(gap, body) = block(above: 0pt, below: 0pt, height: gap, width: 100%, align(bottom, body))
   set text(top-edge: "cap-height", bottom-edge: "baseline")
+  let emblem = if type(emblem) == str { image(master-path(emblem), width: 95%) } else { emblem }
   if emblem != none { block(below: 0pt, raised(15pt, emblem)) }
   row(26pt, text(font: fonts.black, size: 20pt, fill: red, title))
   row(19.5pt, text(size: 10.4pt, tracking: 0.1em, upper(subtitle)))
@@ -502,4 +543,63 @@
   show "℟": it => text(fill: red, it)
 
   body
+}
+
+// =====================================================================
+//  8. Master copy
+// =====================================================================
+//
+//  The master copy is a JSON file (see master_copy_format.json):
+//
+//    { "version": "0.0.0", "fragments": [ { "type", "attributes", "text" } ] }
+//
+//  Each fragment type is the name of a block above (with "_" for "-"),
+//  its attributes are that block's named arguments ("amen_line" →
+//  `amen-line`) and its text is the block's body. Text conventions:
+//    - lines and verses are separated by "\n", hymn stanzas by "\n\n";
+//    - the pause is a plain "*";
+//    - opening words are written normally ("Beátus"); `initial` restores
+//      the second capital printed beside a drop initial ("BEátus");
+//    - rubric text is a string, or a list of strings and {"blk": "…"}.
+//  "content" is accepted as an older name for "text".
+
+/// Fragment type → block.
+#let fragment-registry = (
+  part_title: part-title,
+  hour: hour,
+  nocturn: nocturn,
+  pater_ave: pater-ave,
+  antiphon: antiphon,
+  v_line: v-line,
+  r_line: r-line,
+  line_of: line-of,
+  versicle: versicle,
+  invitatory: invitatory,
+  hymn: hymn,
+  psalm: psalm,
+  canticle: canticle,
+  capitulum: capitulum,
+  rubric: rubric,
+  double_rule: double-rule,
+  end_columns: end-columns,
+)
+
+/// Render one fragment; unknown types are an error, not silently dropped.
+#let render-fragment(f) = {
+  if f.type not in fragment-registry {
+    panic("master copy: unknown fragment type \"" + f.type + "\"")
+  }
+  let named = f.at("attributes", default: (:)).pairs().map(((k, v)) => (k.replace("_", "-"), v)).to-dict()
+  let body = f.at("text", default: f.at("content", default: none))
+  let pos = if body == none { () } else { (body,) }
+  fragment-registry.at(f.type)(..named, ..pos)
+}
+
+/// Render a whole master copy. `src` is a path (see `master-path`) or
+/// already-loaded data.
+///   #show: setup.with(first-page: 21)
+///   #render-master("dominica-lauds.json")
+#let render-master(src) = {
+  let data = if type(src) == str { json(master-path(src)) } else { src }
+  data.fragments.map(render-fragment).join()
 }

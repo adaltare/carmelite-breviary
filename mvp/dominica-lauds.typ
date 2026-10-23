@@ -53,7 +53,7 @@ Glória mundo.
 
 // ----- In I Nocturno -----------------------------------------------
 
-#nocturn(1, head: [Dominica ad Matutinum, in I Nocturno])
+#nocturn(number: 1, head: [Dominica ad Matutinum, in I Nocturno])
 #antiphon[Pro fídei méritis.]
 
 #rubric[
@@ -70,7 +70,7 @@ Glória mundo.
   atque ad Horas tantum minores in omni Officio.
 ]
 
-#psalm([Psalmus 1], initial: "woodcut")[
+#psalm(heading: [Psalmus 1], initial: "woodcut")[
   BEátus vir, qui non ábiit in consílio impiórum, et in via peccatórum non
   stetit, \* et in cáthedra pestiléntiæ non sedit :
 
@@ -100,7 +100,7 @@ Glória mundo.
 #antiphon[Pro fídei méritis vocitátur jure beátus, legem qui Dómini meditátur nocte, diéque.]
 #antiphon[Juste Deus.]
 
-#psalm([Psalmus 2])[
+#psalm(heading: [Psalmus 2])[
   QUare fremuérunt gentes, \* et pópuli meditáti sunt inánia?
 
   Astitérunt reges terræ, et príncipes convenérunt in unum \* advérsus
@@ -134,7 +134,7 @@ Glória mundo.
 #antiphon[Juste Deus, judex fortis, patiénsque, benígnus : in te sperántes muni miserándo fidéles.]
 #antiphon[Surge.]
 
-#psalm([Psalmus 3])[
+#psalm(heading: [Psalmus 3])[
   DOmine, quid multiplicáti sunt qui tríbulant me? \* multi insúrgunt advérsum me.
 
   Multi dicunt ánimæ meæ : \* Non est salus ipsi in Deo ejus.
@@ -159,10 +159,10 @@ Glória mundo.
 
 // ----- In II Nocturno ----------------------------------------------
 
-#nocturn(2, head: [Dominica ad Matutinum, in II Nocturno])
+#nocturn(number: 2, head: [Dominica ad Matutinum, in II Nocturno])
 #antiphon[Natúræ Génitor.]
 
-#psalm([Psalmus 8], initial: "woodcut")[
+#psalm(heading: [Psalmus 8], initial: "woodcut")[
   DOmine, Dóminus noster, \* quam admirábile est nomen tuum in univérsa terra!
 
   Quóniam eleváta est magnificéntia tua, \* super cælos.
@@ -189,7 +189,7 @@ Glória mundo.
 #antiphon[Natúræ Génitor, consérva a morte redémptos, facque tuo dignos servítio fámulos.]
 #antiphon[Péctora nostra.]
 
-#psalm([Psalmus 9, j])[
+#psalm(heading: [Psalmus 9, j])[
   COnfitébor tibi, Dómine, in toto corde meo : \* narrábo ómnia mirabília tua.
 
   Lætábor et exsultábo in te : \* psallam nómini tuo, Altíssime,
@@ -219,7 +219,7 @@ Glória mundo.
 #antiphon[Péctora nostra tibi tu, Cónditor orbis, adúre, igne pio purgans, atque cremándo probans.]
 #antiphon[Tu pópulum.]
 
-#psalm([Psalmus 9, ij])[
+#psalm(heading: [Psalmus 9, ij])[
   PSállite Dómino, qui hábitat in Sion : \* annuntiáte inter gentes stúdia ejus :
 
   Quóniam requírens sánguinem eórum recordátus est : \* non est oblítus
@@ -253,10 +253,10 @@ Glória mundo.
 
 // ----- In III Nocturno ---------------------------------------------
 
-#nocturn(3, head: [Dominica ad Matutinum, in III Nocturno])
+#nocturn(number: 3, head: [Dominica ad Matutinum, in III Nocturno])
 #antiphon[Sponsus.]
 
-#psalm([Psalmus 9, iij], initial: "woodcut")[
+#psalm(heading: [Psalmus 9, iij], initial: "woodcut")[
   UT quid, Dómine, recessísti longe, \* déspicis in opportunitátibus, in
   tribulatióne?
 
@@ -293,7 +293,7 @@ Glória mundo.
 #antiphon[Sponsus ut e thálamo, procéssit Christus in orbem : descéndens cælo jure salutífero.]
 #antiphon[Auxílium nobis.]
 
-#psalm([Psalmus 9, iv])[
+#psalm(heading: [Psalmus 9, iv])[
   EXsúrge, Dómine Deus, exaltétur manus tua : \* ne obliviscáris páuperum.
 
   Propter quid irritávit ímpius Deum? \* dixit enim in corde suo : Non requíret.
@@ -318,7 +318,7 @@ Glória mundo.
 #antiphon[Auxílium nobis, Salvátor, mitte salútis : et tríbuas vitam témpore perpétuo.]
 #antiphon[Rex sine fine manens.]
 
-#psalm([Psalmus 10])[
+#psalm(heading: [Psalmus 10])[
   IN Dómino confído : quómodo dícitis ánimæ meæ : \* Tránsmigra in montem
   sicut passer?
 
@@ -361,7 +361,7 @@ Glória mundo.
   semiduplex de Dominica.
 ]
 
-#psalm([Psalmus 92], initial: "woodcut")[
+#psalm(heading: [Psalmus 92], initial: "woodcut")[
   DOminus regnávit, decórem indútus est : \* indútus est Dóminus
   fortitúdinem, et præcínxit se.
 
@@ -387,7 +387,7 @@ Glória mundo.
   primis Psalmi vel Cantici verbis.
 ]
 
-#psalm([Psalmus 99])[
+#psalm(heading: [Psalmus 99])[
   JUbiláte † Deo, omnis terra : \* servíte Dómino in lætítia.
 
   Introíte in conspéctu ejus, \* in exsultatióne.
@@ -404,7 +404,7 @@ Glória mundo.
 #antiphon[Jubiláte Deo, omnis terra, allelúja.]
 #antiphon[Benedícam te.]
 
-#psalm([Psalmus 62])[
+#psalm(heading: [Psalmus 62])[
   DEus, Deus meus, \* ad te de luce vígilo.
 
   Sitívit in te ánima mea, \* quam multiplíciter tibi caro mea.
@@ -435,7 +435,7 @@ Glória mundo.
 #antiphon[Benedícam te in vita mea, Dómine : et in nómine tuo levábo manus meas, allelúja.]
 #antiphon[Tres púeri.]
 
-#canticle([Canticum trium Puerorum], [Dan. 3, 57-88 et 56])[
+#canticle(heading: [Canticum trium Puerorum], ref: [Dan. 3, 57-88 et 56])[
   BEnedícite, ómnia ópera Dómini, Dómino : \* laudáte et superexaltáte eum in sǽcula.
 
   Benedícite, Angeli Dómini, Dómino : \* benedícite, cæli, Dómino.
@@ -489,7 +489,7 @@ Glória mundo.
 #antiphon[Tres púeri jussu regis in fornácem missi sunt, non timéntes flammam ignis, dicéntes : Benedíctus Deus, allelúja.]
 #antiphon[Allelúja.]
 
-#psalm([Psalmus 148])[
+#psalm(heading: [Psalmus 148])[
   LAudáte Dóminum de cælis : \* laudáte eum in excélsis.
 
   Laudáte eum, omnes Angeli ejus : \* laudáte eum, omnes virtútes ejus.
@@ -524,7 +524,7 @@ Glória mundo.
 
 #antiphon[Allelúja, laudáte Dóminum de cælis, allelúja, allelúja.]
 
-#capitulum([Apoc. 7, 12])[
+#capitulum(ref: [Apoc. 7, 12])[
   BEnedíctio, et cláritas, et sapiéntia, et gratiárum áctio, honor, et
   virtus, et fortitúdo Deo nostro in sǽcula sæculórum. Amen.
 ]
