@@ -1,0 +1,15 @@
+{
+  "version": "0.0.0",
+  "fragments": [
+    {
+      "type": "hymn",
+      "attributes": {
+        "amen_line": false
+      },
+      "content": "Ecce, jam noctis tenuátur umbra,\nLucis auróra rútilans corúscat :\nNísibus totis rogitémus omnes\nCunctipoténtem.\n\nUt Deus nostri miserátus, omnem\nPellat languórem, tríbuat salútem,\nDonet et nobis, pietáte Patris,\nRegna polórum.\n\nPræstet hoc nobis Déitas beáta\nPatris, ac Nati, paritérque Sancti\nSpíritus, cujus réboat in omni\nGlória mundo."
+    },
+    {
+      "type": "blank"
+    }
+  ]
+}
