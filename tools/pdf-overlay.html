@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF Overlay</title>
+<!--
+  Stack two PDFs and compare them.
+
+  Open this file in a browser and choose (or drop) a bottom and a top PDF.
+  Or serve the repo and pass paths:
+    python3 -m http.server 8000
+    http://localhost:8000/tools/pdf-overlay.html?a=inserts/guadalupe/assumption-reference.pdf&b=inserts/guadalupe/guadalupe.pdf
+
+  Keys:  ← →          page (both)       [ ]  top page only    { }  bottom page only
+         Shift+arrows  nudge top layer 0.5 pt (add Alt for 0.1 pt)
+         space         hide/show top     d    cycle blend mode    - =  zoom
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+  :root { --bg: #e9e9e6; --panel: #fbfbfa; --ink: #222; --muted: #777; --line: #d4d4cf; --accent: #c8202a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 13px/1.4 -apple-system, system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  header {
+    position: sticky; top: 0; z-index: 10; background: var(--panel); border-bottom: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; padding: 8px 14px;
+  }
+  .grp { display: flex; align-items: center; gap: 6px; }
+  .grp b { font-weight: 600; }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  label.file { border: 1px solid var(--line); border-radius: 4px; padding: 3px 8px; cursor: pointer; background: #fff; max-width: 220px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  label.file input { display: none; }
+  input[type=number] { width: 52px; }
+  input[type=range] { width: 140px; }
+  button { font: inherit; border: 1px solid var(--line); background: #fff; border-radius: 4px; padding: 2px 8px; cursor: pointer; }
+  .muted { color: var(--muted); }
+  .live { color: #1a7f37; font-size: 12px; }
+  .live:not(:empty)[title=""] { color: var(--accent); }
+  main { padding: 20px; display: flex; justify-content: center; }
+  #stage { position: relative; box-shadow: 0 1px 6px rgba(0,0,0,.18); background: #fff; }
+  #stage canvas { position: absolute; left: 0; top: 0; }
+  #drop { padding: 60px; text-align: center; color: var(--muted); border: 2px dashed var(--line); border-radius: 8px; }
+  body.dragging #drop, body.dragging #stage { outline: 3px dashed var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="grp"><span class="swatch" style="background:#555"></span><b>Bottom</b>
+    <label class="file"><input type="file" id="fileA" accept="application/pdf"><span id="nameA">choose PDF…</span></label>
+    page <input type="number" id="pageA" min="1" value="1"> <span class="muted" id="countA">/ –</span> <span class="live" id="liveA" hidden></span>
+  </div>
+  <div class="grp"><span class="swatch" style="background:var(--accent)"></span><b>Top</b>
+    <label class="file"><input type="file" id="fileB" accept="application/pdf"><span id="nameB">choose PDF…</span></label>
+    page <input type="number" id="pageB" min="1" value="1"> <span class="muted" id="countB">/ –</span> <span class="live" id="liveB" hidden></span>
+  </div>
+  <div class="grp">
+    <button id="prev" title="←">◀</button><button id="next" title="→">▶</button>
+  </div>
+  <div class="grp">opacity <input type="range" id="opacity" min="0" max="100" value="50"><span id="opacityVal">50%</span></div>
+  <div class="grp">blend
+    <select id="blend">
+      <option value="normal">normal</option>
+      <option value="difference">difference</option>
+      <option value="multiply">multiply</option>
+      <option value="tint">tint (bottom grey, top red)</option>
+    </select>
+  </div>
+  <div class="grp">offset x <input type="number" id="dx" step="0.5" value="0"> y <input type="number" id="dy" step="0.5" value="0"> pt
+    · scale <input type="number" id="sc" step="0.005" value="1" style="width:64px">
+    <button id="reset">reset</button>
+  </div>
+  <div class="grp">zoom <input type="range" id="zoom" min="50" max="400" value="150"><span id="zoomVal">150%</span></div>
+</header>
+<main>
+  <div id="drop">Drop two PDFs here (first = bottom, second = top), or use the pickers above.</div>
+  <div id="stage" hidden><canvas id="cA"></canvas><canvas id="cB"></canvas></div>
+</main>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+const $ = id => document.getElementById(id);
+const docs = { A: null, B: null };
+let renderSeq = 0;
+
+async function loadPdf(which, data, name) {
+  docs[which] = await pdfjsLib.getDocument({ data }).promise;
+  $("name" + which).textContent = name;
+  $("name" + which).title = name;
+  $("count" + which).textContent = "/ " + docs[which].numPages;
+  $("page" + which).max = docs[which].numPages;
+  if (+$("page" + which).value > docs[which].numPages) $("page" + which).value = 1;
+  render();
+}
+
+async function loadFile(which, file) {
+  handles[which] = null; // a plain File cannot be watched
+  setLive(which, false);
+  loadPdf(which, new Uint8Array(await file.arrayBuffer()), file.name);
+}
+
+// ---------------------------------------------------------------------
+//  Live reload (File System Access API: Chrome, Edge)
+//
+//  A file chosen through the picker or dropped on the page is kept as a
+//  handle. Every second its modification time is checked; when it
+//  changes, the PDF is reloaded in place. Pages, offsets, zoom, opacity
+//  and blend live in the toolbar and are left as they are.
+// ---------------------------------------------------------------------
+
+const canWatch = "showOpenFilePicker" in window;
+const handles = { A: null, B: null };
+const stamps = { A: 0, B: 0 };
+
+function setLive(which, on, note) {
+  const el = $("live" + which);
+  el.hidden = !on && !note;
+  el.textContent = note || "● live";
+  el.title = note ? "" : "Reloads when the file changes on disk";
+}
+
+async function loadHandle(which, handle) {
+  handles[which] = handle;
+  const file = await handle.getFile();
+  stamps[which] = file.lastModified;
+  await loadPdf(which, new Uint8Array(await file.arrayBuffer()), file.name);
+  setLive(which, true);
+}
+
+async function pickFile(which) {
+  try {
+    const [handle] = await window.showOpenFilePicker({
+      id: "pdf-overlay-" + which,
+      types: [{ description: "PDF", accept: { "application/pdf": [".pdf"] } }],
+    });
+    await loadHandle(which, handle);
+  } catch (err) {
+    if (err.name !== "AbortError") alert(err);
+  }
+}
+
+async function poll() {
+  for (const which of ["A", "B"]) {
+    const handle = handles[which];
+    if (!handle) continue;
+    try {
+      const file = await handle.getFile();
+      if (file.lastModified === stamps[which]) continue;
+      const data = new Uint8Array(await file.arrayBuffer());
+      // Typst may still be writing the file: if it does not parse, keep
+      // the old version and try again on the next poll.
+      const doc = await pdfjsLib.getDocument({ data }).promise;
+      stamps[which] = file.lastModified;
+      if (docs[which]) docs[which].destroy();
+      docs[which] = doc;
+      $("count" + which).textContent = "/ " + doc.numPages;
+      $("page" + which).max = doc.numPages;
+      if (+$("page" + which).value > doc.numPages) $("page" + which).value = doc.numPages;
+      setLive(which, true);
+      flash(which);
+      render();
+    } catch (err) {
+      if (err.name === "NotFoundError") setLive(which, false, "file missing");
+      // Otherwise a half-written PDF: retry next time.
+    }
+  }
+}
+setInterval(poll, 1000);
+
+/// Briefly highlight the file name after a reload.
+function flash(which) {
+  const el = $("name" + which).parentElement;
+  el.style.transition = "none";
+  el.style.background = "#fde68a";
+  requestAnimationFrame(() => {
+    el.style.transition = "background 1.2s";
+    el.style.background = "";
+  });
+}
+
+async function loadUrl(which, url) {
+  // Paths are taken from the server root (where the repo is served).
+  const res = await fetch(new URL(url, location.origin + "/"));
+  if (!res.ok) throw new Error(url + ": " + res.status);
+  loadPdf(which, new Uint8Array(await res.arrayBuffer()), url.split("/").pop());
+}
+
+/// Render one page off-screen at `scale` (CSS px per PDF pt).
+/// Returns the canvas and the page size in CSS px.
+async function renderPage(doc, num, scale) {
+  const page = await doc.getPage(Math.min(Math.max(1, num), doc.numPages));
+  const vp = page.getViewport({ scale });
+  const dpr = window.devicePixelRatio || 1;
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(vp.width * dpr);
+  canvas.height = Math.round(vp.height * dpr);
+  await page.render({ canvasContext: canvas.getContext("2d"), viewport: page.getViewport({ scale: scale * dpr }) }).promise;
+  return { canvas, w: vp.width, h: vp.height };
+}
+
+/// Copy an off-screen render into a visible canvas in one step, so a
+/// reload never shows a blank page.
+function show(target, r) {
+  target.width = r.canvas.width;
+  target.height = r.canvas.height;
+  target.style.width = r.w + "px";
+  target.style.height = r.h + "px";
+  target.getContext("2d").drawImage(r.canvas, 0, 0);
+}
+
+/// Recolour a rendered canvas: dark pixels → `rgb`, light → transparent.
+function tint(canvas, rgb) {
+  const ctx = canvas.getContext("2d");
+  const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const d = img.data;
+  for (let i = 0; i < d.length; i += 4) {
+    const lum = (d[i] * 0.299 + d[i + 1] * 0.587 + d[i + 2] * 0.114) * d[i + 3] / 255 + 255 * (1 - d[i + 3] / 255);
+    d[i] = rgb[0]; d[i + 1] = rgb[1]; d[i + 2] = rgb[2];
+    d[i + 3] = 255 - lum;
+  }
+  ctx.putImageData(img, 0, 0);
+}
+
+async function render() {
+  const seq = ++renderSeq;
+  const zoom = $("zoom").value / 100;
+  const blend = $("blend").value;
+  if (!docs.A && !docs.B) return;
+  $("drop").hidden = true;
+  $("stage").hidden = false;
+  let size = { w: 0, h: 0 };
+  const sc = parseFloat($("sc").value) || 1;
+  const jobs = [];
+  if (docs.A) jobs.push(renderPage(docs.A, +$("pageA").value, zoom).then(r => ({ which: "A", r })));
+  if (docs.B) jobs.push(renderPage(docs.B, +$("pageB").value, zoom * sc).then(r => ({ which: "B", r })));
+  const done = await Promise.all(jobs);
+  if (seq !== renderSeq) return; // a newer render started
+  for (const { which, r } of done) {
+    if (blend === "tint") tint(r.canvas, which === "A" ? [40, 40, 40] : [220, 30, 40]);
+    show($("c" + which), r);
+    size = { w: Math.max(size.w, r.w), h: Math.max(size.h, r.h) };
+  }
+  $("cA").hidden = !docs.A;
+  $("cB").hidden = !docs.B;
+  const stage = $("stage");
+  stage.style.width = size.w + "px";
+  stage.style.height = size.h + "px";
+  applyLayer();
+}
+
+/// Opacity, blend and offset of the top layer (no re-render needed).
+function applyLayer() {
+  const zoom = $("zoom").value / 100;
+  const cB = $("cB");
+  const blend = $("blend").value;
+  cB.style.opacity = $("opacity").value / 100;
+  cB.style.mixBlendMode = blend === "tint" ? "multiply" : blend;
+  cB.style.transform = `translate(${(parseFloat($("dx").value) || 0) * zoom}px, ${(parseFloat($("dy").value) || 0) * zoom}px)`;
+  $("opacityVal").textContent = $("opacity").value + "%";
+  $("zoomVal").textContent = $("zoom").value + "%";
+}
+
+function step(which, delta) {
+  for (const w of which) {
+    const el = $("page" + w);
+    const max = docs[w] ? docs[w].numPages : 1;
+    el.value = Math.min(max, Math.max(1, (+el.value || 1) + delta));
+  }
+  render();
+}
+
+$("fileA").onchange = e => e.target.files[0] && loadFile("A", e.target.files[0]);
+$("fileB").onchange = e => e.target.files[0] && loadFile("B", e.target.files[0]);
+// Where supported, the pickers open the file-handle picker instead, so
+// the chosen files can be watched.
+if (canWatch) {
+  for (const which of ["A", "B"]) {
+    $("file" + which).parentElement.addEventListener("click", e => { e.preventDefault(); pickFile(which); });
+  }
+}
+$("pageA").onchange = $("pageB").onchange = render;
+$("prev").onclick = () => step("AB", -1);
+$("next").onclick = () => step("AB", 1);
+$("opacity").oninput = applyLayer;
+$("dx").oninput = $("dy").oninput = applyLayer;
+$("sc").onchange = render;
+$("zoom").oninput = () => { applyLayer(); render(); };
+$("blend").onchange = render;
+$("reset").onclick = () => { $("dx").value = 0; $("dy").value = 0; $("sc").value = 1; render(); };
+
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" && e.target.type !== "range") return;
+  const nudge = e.altKey ? 0.1 : 0.5;
+  const k = e.key;
+  if (e.shiftKey && k.startsWith("Arrow")) {
+    const f = k === "ArrowLeft" || k === "ArrowRight" ? "dx" : "dy";
+    const sign = k === "ArrowLeft" || k === "ArrowUp" ? -1 : 1;
+    $(f).value = +(((parseFloat($(f).value) || 0) + sign * nudge).toFixed(2));
+    applyLayer();
+  } else if (k === "ArrowLeft") step("AB", -1);
+  else if (k === "ArrowRight") step("AB", 1);
+  else if (k === "[") step("B", -1);
+  else if (k === "]") step("B", 1);
+  else if (k === "{") step("A", -1);
+  else if (k === "}") step("A", 1);
+  else if (k === " ") $("cB").style.visibility = $("cB").style.visibility === "hidden" ? "" : "hidden";
+  else if (k === "d") {
+    const s = $("blend");
+    s.selectedIndex = (s.selectedIndex + 1) % s.options.length;
+    render();
+  } else if (k === "-" || k === "=") {
+    $("zoom").value = +$("zoom").value + (k === "=" ? 25 : -25);
+    applyLayer(); render();
+  } else return;
+  e.preventDefault();
+});
+
+// Drag and drop: first file → bottom, second → top; a single file fills
+// the empty slot (bottom first).
+document.addEventListener("dragover", e => { e.preventDefault(); document.body.classList.add("dragging"); });
+document.addEventListener("dragleave", e => { if (!e.relatedTarget) document.body.classList.remove("dragging"); });
+document.addEventListener("drop", e => {
+  e.preventDefault();
+  document.body.classList.remove("dragging");
+  const isPdf = f => f.type === "application/pdf" || f.name.endsWith(".pdf");
+  const slots = n => n >= 2 ? ["A", "B"] : [docs.A && !docs.B ? "B" : "A"];
+  const items = [...e.dataTransfer.items].filter(i => i.kind === "file");
+  if (canWatch && items.length && items[0].getAsFileSystemHandle) {
+    // Handles must be requested before the event returns.
+    Promise.all(items.map(i => i.getAsFileSystemHandle())).then(async hs => {
+      const pdfs = [];
+      for (const h of hs) if (h && h.kind === "file" && isPdf(await h.getFile())) pdfs.push(h);
+      slots(pdfs.length).forEach((which, i) => pdfs[i] && loadHandle(which, pdfs[i]));
+    });
+    return;
+  }
+  const files = [...e.dataTransfer.files].filter(isPdf);
+  slots(files.length).forEach((which, i) => files[i] && loadFile(which, files[i]));
+});
+
+// ?a=…&b=… load PDFs by URL (when the page is served over http).
+const q = new URLSearchParams(location.search);
+if (q.get("a")) loadUrl("A", q.get("a")).catch(err => alert(err));
+if (q.get("b")) loadUrl("B", q.get("b")).catch(err => alert(err));
+for (const [k, id] of [["pa", "pageA"], ["pb", "pageB"], ["opacity", "opacity"], ["blend", "blend"]]) {
+  if (q.get(k)) $(id).value = q.get(k);
+}
+applyLayer();
+</script>
+</body>
+</html>
