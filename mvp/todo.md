@@ -7,6 +7,7 @@
 - [ ] Build an interface for viewing changes
 - [ ] Write docs / style guide
 - [ ] Read and understand the whole style file that Claude generated
-- [ ] Hone in on the exact fonts
+- [ ] Hone in on the exact fonts\
+Confimred that Plantin is the base font
 - [ ] Research better diffing algorithms
 
