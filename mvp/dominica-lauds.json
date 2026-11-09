@@ -1,7 +1,7 @@
 {
   "version": "0.0.0",
   "meta": {},
-  "blocks": [
+  "fragments": [
     {
       "type": "part_title",
       "attributes": {
