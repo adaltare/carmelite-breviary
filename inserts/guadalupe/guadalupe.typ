@@ -23,7 +23,7 @@
 
 #let fonts = (
   // Plantin has no ǽ; EB Garamond supplies it.
-  body: ("Plantin", "EB Garamond"),
+  body: "Plantin",
   // Plantin has only lining figures; the Assumption prints old-style.
   figures: "EB Garamond",
   // ℣ ℟ (missing from Plantin).
@@ -35,7 +35,7 @@
 #let sizes = (
   body: 10.6pt,
   rubric: 9pt, // red rubrics, Bened., Ad Nunc dimittis
-  title: 11.6pt, // Hymnus, Oratio, Lectio ij
+  title: 10pt, // Hymnus, Oratio, Lectio ij
   sub: 9.6pt, // De verbis Apoc. …
   head: 11pt, // running head
   hour: 9.2pt, // IN I VESPERIS, AD MATUTINUM
@@ -46,7 +46,7 @@
 )
 
 /// Baseline-to-baseline distance of body text and of rubrics.
-#let pitch = 9.5pt
+#let pitch = 10pt
 #let rubric-pitch = 8.5pt
 
 /// Fixed line box so accents never push lines off the grid.
@@ -62,7 +62,7 @@
 // #let sheet = (width: 385.5pt, height: 583.9pt)
 #let sheet = (width: 383pt, height: 583.9pt)
 #let trim = (x0: 36.7pt, x1: 348.8pt, y0: 36.7pt, y1: 541.8pt)
-#let margin = (inside: 68.3pt, outside: 66pt, top: 86.4pt, bottom: 76pt)
+#let margin = (inside: 68.3pt, outside: 66pt, top: 86.4pt, bottom: 70pt)
 #let gutter = 9.2pt
 #let head-baseline = 73.7pt
 #let head-rule = 81.8pt
@@ -100,7 +100,7 @@
 #let bened(body) = rubric[Bened. #blk(body)]
 
 /// Red title centred over the column: Hymnus, Oratio, Lectio ij.
-#let title(body, above: 7pt) = block(width: 100%, above: above, below: 3pt, sticky: true, align(
+#let title(body, above: 7pt) = block(width: 100%, above: above, below: 0pt, sticky: true, align(
   center,
   text(size: sizes.title, fill: red, body),
 ))
@@ -145,7 +145,7 @@
 /// Drop initial. `letter` is dropped; `caps` follows it in capitals.
 ///   style "versal": red Plantin capital, two lines
 ///   style "woodcut": black woodcut initial, three lines
-#let initial(style: "versal", letter, caps, body) = block(above: 3pt, below: par-gap + leading-for(pitch), {
+#let initial(style: "versal", letter, caps, body) = {
   set par(first-line-indent: 0pt)
   let woodcut = style == "woodcut"
   dropcap(
@@ -157,7 +157,7 @@
     letter,
     [#upper(caps)#body],
   )
-})
+}
 
 /// Hymn. `stanzas` is an array of arrays of lines (content). The first
 /// line of the first stanza takes a versal initial; give later stanzas
@@ -313,19 +313,20 @@
     if woodcut-image != none {
       image(woodcut-image, width: 242pt)
     } else {
-      rect(width: 242pt, height: 130pt, stroke: 0.5pt, align(center + horizon, text(
+      rect(width: 242pt, height: 100pt, stroke: 0.5pt, align(center + horizon, text(
         size: 8pt,
         fill: luma(120),
       )[woodcut\ 20251031\_131444495]))
     }
   }))
   v(23pt)
-  text(size: sizes.day, tracking: 0em, number-type: "lining")[DIE 13 DECEMBRIS]
+  text(size: sizes.day, tracking: 0em, number-type: "lining")[DIE 12 DECEMBRIS]
   v(0pt)
-  text(font: fonts.blackletter, size: sizes.feast, fill: red)[B. Mariæ Virg. de Guadalupe]
+  let r = body => text(fill: red, body)
+  text(font: fonts.blackletter, size: sizes.feast)[#r[B.] #r[M]ariæ #r[V]irg. de #r[G]uadalupe]
   v(7.4pt)
   text(size: sizes.rank, weight: 400, fill: red, tracking: 0em)[DUPLEX MAJUS I CLASSIS]
-  v(15.3pt)
+  v(15.5pt)
   [#metadata(none)#col-start]
 })
 
