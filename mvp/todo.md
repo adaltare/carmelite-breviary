@@ -11,3 +11,18 @@
 Confimred that Plantin is the base font
 - [ ] Research better diffing algorithms
 
+# Inserts Todo
+
+## Guadalupe
+
+- [ ] Original dropcaps
+- [ ] Page breaks
+- [ ] R. and V.
+- [ ] Balanced column at the end
+- [ ] Stack based fractional spacing
+- [ ] Fix crop marks
+- [ ] Fix image y scaling
+
+## Tooling
+
+- [ ] Allow draging in the viewer to change the offsets

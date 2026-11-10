@@ -17,7 +17,8 @@
 // =====================================================================
 
 /// Path of the header woodcut. `none` draws a placeholder of the same size.
-#let woodcut-image = none // e.g. "20251031_131444495.png"
+#let woodcut-image = "test3.png"
+// #let woodcut-image = none
 
 #let red = rgb(226, 35, 38)
 
@@ -26,6 +27,7 @@
   body: "Plantin",
   // Plantin has only lining figures; the Assumption prints old-style.
   figures: "EB Garamond",
+  hours: "Superclarendon",
   // ℣ ℟ (missing from Plantin).
   signs: "Cardo",
   blackletter: "Cloister",
@@ -38,7 +40,7 @@
   title: 10pt, // Hymnus, Oratio, Lectio ij
   sub: 9.6pt, // De verbis Apoc. …
   head: 11pt, // running head
-  hour: 9.2pt, // IN I VESPERIS, AD MATUTINUM
+  hour: 8pt, // IN I VESPERIS, AD MATUTINUM
   nocturn: 7.9pt, // IN I NOCTURNO
   day: 8pt, // DIE 12 DECEMBRIS
   feast: 19pt, // blackletter title
@@ -54,17 +56,23 @@
 #let bottom-edge = -0.25em
 #let leading-for(p) = p - (top-edge - bottom-edge)
 
-/// Extra space between paragraphs (antiphons, versicles …).
-#let par-gap = 2.6pt
+/// Extra space between paragraphs, on top of the line grid. Used by every
+/// paragraph-level block (antiphons, versicles, rubrics, lessons, hymn
+/// stanzas …); headings keep their own spacing. At 0pt paragraphs sit on
+/// the same baseline grid as the lines inside them.
+#let par-gap = 3pt
+/// Distance between consecutive paragraph-level blocks (bottom edge of one
+/// line box to top edge of the next).
+#let par-spacing = leading-for(pitch) + par-gap
 #let indent = 0.5em
 
 // Sheet and trim (pt, from the crop marks of the scans).
-// #let sheet = (width: 385.5pt, height: 583.9pt)
-#let sheet = (width: 383pt, height: 583.9pt)
+#let sheet = (width: 385.5pt, height: 583.9pt)
+// #let sheet = (width: 383pt, height: 583.9pt)
 #let trim = (x0: 36.7pt, x1: 348.8pt, y0: 36.7pt, y1: 541.8pt)
 #let margin = (inside: 68.3pt, outside: 66pt, top: 86.4pt, bottom: 70pt)
 #let gutter = 9.2pt
-#let head-baseline = 73.7pt
+#let head-baseline = 77pt
 #let head-rule = 81.8pt
 
 // =====================================================================
@@ -76,7 +84,7 @@
 #let V = r[#text(font: fonts.signs)[℣].]
 #let R = r[#text(font: fonts.signs)[℟].]
 /// Mediant asterisk, black (antiphons) and red (responsories).
-#let star = box(text(size: 1.1em, baseline: 0.12em, "*"))
+#let star = box(text(size: 0pt, baseline: 0.12em, "*"))
 #let rstar = r(star)
 /// Small capitals made from capitals (Plantin has none).
 #let sc(body) = text(size: 0.8em, tracking: 0.03em, upper(body))
@@ -86,7 +94,7 @@
 // =====================================================================
 
 /// Small red rubric. `blk[…]` marks words printed black.
-#let rubric(indent-first: true, body) = block(above: par-gap + 1pt, below: par-gap + 1pt, {
+#let rubric(indent-first: true, body) = block(above: par-spacing, below: par-spacing, {
   set text(size: sizes.rubric, fill: red, spacing: .5em)
   set par(
     leading: leading-for(rubric-pitch),
@@ -99,38 +107,17 @@
 /// "Bened. …" — small type, red label.
 #let bened(body) = rubric[Bened. #blk(body)]
 
-/// Red title centred over the column: Hymnus, Oratio, Lectio ij.
-#let title(body, above: 7pt) = block(width: 100%, above: above, below: 0pt, sticky: true, align(
-  center,
-  text(size: sizes.title, fill: red, body),
-))
-
-/// Lectio or Capitulum with its reference set flush right.
-#let title-ref(left, right, above: 7pt) = block(width: 100%, above: above, below: 3pt, sticky: true, context {
-  // Shrink slightly if the pair would not fit on one line.
-  let full = text(size: sizes.title)[#left#h(0.8em)#right]
-  let s = calc.min(
-    sizes.title,
-    sizes.title * (((sheet.width - margin.inside - margin.outside - gutter) / 2) / measure(full).width),
-  )
-  text(size: s, fill: red)[#box(left) #h(1fr) #box(right)]
-})
-
-/// Hour heading in spaced capitals: IN I VESPERIS, AD MATUTINUM.
-#let hour(body, sub: none) = block(width: 100%, above: 5pt, below: 5pt, sticky: true, align(center, {
-  text(size: sizes.hour, tracking: 0.14em, upper(body))
-  if sub != none {
-    linebreak()
-    text(size: sizes.sub, fill: red, sub)
-  }
-}))
-
-/// Nocturn heading in small spaced capitals.
-#let nocturn(body) = block(width: 100%, above: 10pt, below: 5pt, sticky: true, align(center, text(
-  size: sizes.nocturn,
-  tracking: 0.1em,
-  upper(body),
-)))
+// ---------------------------------------------------------------------
+//  Headings
+//
+//  The office's divisions are Typst headings, styled by the show rules in
+//  "Document setup" below:
+//    =    hour     IN I VESPERIS, AD MATUTINUM, AD LAUDES …
+//    ==   nocturn  IN I NOCTURNO …
+//    ===  title    Hymnus, Oratio, Lectio ij …; a reference goes inside
+//                  the heading after #h(1fr):
+//                    === Lectio j #h(1fr) Cap. 24, 5-31
+// ---------------------------------------------------------------------
 
 /// Black centred source line (De libro …, Homilía …), optional red sub.
 #let source(body, sub: none) = block(width: 100%, above: 8pt, below: 2pt, sticky: true, align(center, {
@@ -152,52 +139,63 @@
     height: if woodcut { 3 } else { 2 },
     gap: if woodcut { 3pt } else { 1.5pt },
     hanging-indent: if woodcut { 0.3em } else { 0.45em },
-    font: if woodcut { fonts.woodcut } else { "Plantin" },
+    font: if woodcut { fonts.woodcut } else { fonts.body },
     fill: if woodcut { black } else { red },
     letter,
     [#upper(caps)#body],
   )
 }
 
-/// Hymn. `stanzas` is an array of arrays of lines (content). The first
-/// line of the first stanza takes a versal initial; give later stanzas
-/// their red letter in markup.
+/// Number of printed lines in a paragraph `height` tall. Lines sit on the
+/// fixed grid, so n lines are n × pitch − leading tall.
+#let printed-lines(height) = calc.round((height + leading-for(pitch).to-absolute()) / pitch)
+
+/// First stanza of a hymn, opened by a two-line red versal. The versal's
+/// cap height spans from the cap height of line 1 to the baseline of
+/// line 2. `caps` follows it in capitals ("PRæclára").
+#let versal-stanza(letter, caps, verses) = block(context {
+  let cap-height = measure(text(top-edge: "cap-height", bottom-edge: "baseline", "H")).height
+  let versal = text(
+    size: sizes.body * ((pitch + cap-height) / cap-height),
+    fill: red,
+    top-edge: "cap-height",
+    bottom-edge: "baseline",
+    letter,
+  )
+  let indent = measure(versal).width + 1.5pt
+  // Align the versal's top with the cap height of line 1.
+  place(left + top, dy: top-edge.to-absolute() - cap-height, versal)
+
+  // Indent printed lines, not verse lines: a verse line that wraps uses
+  // up both lines beside the versal, and the next one starts flush left.
+  layout(size => {
+    let beside = 2 // printed lines still beside the versal
+    for (i, verse) in verses.enumerate() {
+      if i == 0 { verse = [#upper(caps)#verse] }
+      if beside <= 0 {
+        par(verse)
+      } else {
+        let p = par(first-line-indent: (amount: indent, all: true), hanging-indent: indent, verse)
+        beside -= printed-lines(measure(width: size.width, p).height)
+        p
+      }
+    }
+  })
+})
+
+/// Hymn. `stanzas` is an array of stanzas, each an array of verse lines
+/// (content). With `letter`, the first stanza opens with a red versal
+/// (see `versal-stanza`); later stanzas carry their red letter in markup.
+/// Verse lines that wrap hang by 1em. Ends with "Amen." unless
+/// `amen: false`.
 #let hymn(letter: none, caps: "", stanzas, amen: true) = {
-  set par(first-line-indent: 0pt, hanging-indent: 1em, justify: false, spacing: leading-for(pitch))
-  set text(hyphenate: false)
-  for (i, stanza) in stanzas.enumerate() {
-    block(
-      above: if i == 0 { 3pt } else { 5pt },
-      below: 0pt,
-      {
-        if i == 0 and letter != none {
-          // Two-line red versal: its cap height spans from the cap height of
-          // line 1 to the baseline of line 2. Lines 1–2 are indented past it.
-          context {
-            let cap-h = measure(text(
-              font: "Plantin",
-              size: 10pt,
-              top-edge: "cap-height",
-              bottom-edge: "baseline",
-              "H",
-            )).height
-            let s = (pitch + cap-h / 10pt * sizes.body) / (cap-h / 10pt)
-            let cap = text(font: "Plantin", size: s, fill: red, top-edge: "cap-height", bottom-edge: "baseline", letter)
-            let w = measure(cap).width + 1.5pt
-            let dy = top-edge.to-absolute() - cap-h / 10pt * sizes.body
-            place(left + top, dy: dy, cap)
-            for (j, l) in stanza.enumerate() {
-              let l = if j == 0 [#upper(caps)#l] else { l }
-              if j < 2 { par(first-line-indent: (amount: w, all: true), hanging-indent: w + 1em, l) } else { par(l) }
-            }
-          }
-        } else {
-          stanza.map(l => par(l)).join()
-        }
-      },
-    )
+  set par(first-line-indent: 0pt, hanging-indent: 1em, justify: true, spacing: leading-for(pitch))
+  let plain-stanza(verses) = block(verses.map(par).join())
+  let stanzas = if letter == none { stanzas.map(plain-stanza) } else {
+    (versal-stanza(letter, caps, stanzas.first()),) + stanzas.slice(1).map(plain-stanza)
   }
-  if amen { block(width: 100%, above: leading-for(pitch), below: par-gap + 4pt, align(right)[#r[A]men.#h(0.5em)]) }
+  block(above: 3pt, below: 0pt, stack(spacing: 7pt, ..stanzas))
+  if amen { block(width: 100%, above: par-spacing, below: par-spacing, align(right)[#r[A]men.#h(0.5em)]) }
 }
 
 /// Red rule across the column (closing the office).
@@ -251,10 +249,10 @@
 #let column-rule = context {
   let n = counter(page).get().first()
   let pg = here().page()
-  let y0 = margin.top - 3pt
+  let y0 = margin.top + 2pt
   let starts = query(col-start).filter(m => m.location().page() == pg)
   if starts.len() > 0 { y0 = starts.first().location().position().y }
-  let y1 = sheet.height - margin.bottom + 1pt
+  let y1 = sheet.height - margin.bottom - 2pt
   let ends = query(col-end).filter(m => m.location().page() == pg)
   let x = block-x(n) + block-width / 2
   // The rule stops early only if the office ends in the left column;
@@ -262,7 +260,7 @@
   if ends.len() > 0 and ends.first().location().position().x < x {
     y1 = ends.first().location().position().y
   }
-  place(dx: x, dy: y0, line(angle: 90deg, length: y1 - y0, stroke: 0.6pt + red))
+  place(dx: x, dy: y0, line(angle: 90deg, length: y1 - y0, stroke: 0.8pt + red))
 }
 
 // =====================================================================
@@ -290,15 +288,37 @@
 #set par(
   justify: true,
   leading: leading-for(pitch),
-  spacing: leading-for(pitch) + par-gap,
+  spacing: par-spacing,
   first-line-indent: (amount: indent, all: true),
   linebreaks: "optimized",
 )
-#set block(spacing: leading-for(pitch) + par-gap)
+#set block(spacing: par-spacing)
+#set heading(numbering: none)
+// Undo Typst's default heading styling (bold, enlarged text). The enlarged
+// size would also stretch the em-based line spacing inside a heading.
+#show heading: set text(size: sizes.body, weight: "regular")
+// Hour: spaced capitals.
+#show heading.where(level: 1): it => block(width: 100%, above: 5pt, below: 5pt, sticky: true, align(
+  center,
+  text(font: fonts.hours, size: sizes.hour, tracking: 0.6pt, spacing: 5pt, upper(it.body)),
+))
+// Nocturn: small spaced capitals.
+#show heading.where(level: 2): it => block(width: 100%, above: par-spacing * 2, below: par-spacing, sticky: true, align(
+  center,
+  text(weight: "bold", size: sizes.nocturn, spacing: 6.8pt, tracking: 0pt, scale(upper(it.body), x: 88%)),
+))
+// Title: red, centred. With a reference after #h(1fr) it spans the column,
+// shrinking slightly if title and reference would not fit on one line.
+#show heading.where(level: 3): it => block(width: 100%, above: par-spacing * 2, below: 0pt, sticky: true, layout(
+  size => {
+    let s = calc.min(sizes.title, sizes.title * (size.width / measure(text(size: sizes.title, it.body)).width))
+    align(center, text(size: s, fill: red, it.body))
+  },
+))
 // Old-style figures, as in the Assumption. Text set with
 // `number-type: "lining"` keeps Plantin's own figures.
 #show regex("[0-9]"): it => context if text.number-type == "lining" { it } else {
-  text(font: fonts.figures, number-type: "old-style", size: 1.06em, it)
+  text(font: fonts.figures, number-type: "old-style", it)
 }
 
 // =====================================================================
@@ -311,7 +331,7 @@
   set text(top-edge: "cap-height", bottom-edge: "baseline")
   block(above: 0pt, below: 0pt, pad(top: -13.4pt, {
     if woodcut-image != none {
-      image(woodcut-image, width: 242pt)
+      image(woodcut-image, height: 100pt)
     } else {
       rect(width: 242pt, height: 100pt, stroke: 0.5pt, align(center + horizon, text(
         size: 8pt,
@@ -337,7 +357,7 @@
 
 #rubric[Omnia de Communi Festorum B. Mariæ Virginis \[161\], præter ea quæ hic habentur propria.]
 
-#hour[In I Vesperis]
+= In I Vesperis
 
 #rubric[Antiphonæ de Laudibus, Psalmi ut in I Vesperis de Communi \[161\]; Capitulum, Responsorium et Hymnus item de Communi.]
 
@@ -345,7 +365,7 @@
 
 #r[Ad Magnif. Ant.] Elégi et sanctificávi #star locum istum, ut sit ibi nomen meum, et permáneant óculi mei et cor meum ibi cunctis diébus.
 
-#title[Oratio]
+=== Oratio
 #initial(
   "D",
   "e",
@@ -362,11 +382,14 @@
 
 #rubric[Ad Nunc dimittis Ant. #blk[Allelúja, Sancta.]]
 
-#hour[Ad Matutinum]
+= Ad Matutinum
 
 #r[Invitat.] In honórem beatíssimæ Maríæ Vírginis #rstar Jubilémus Dómino. #r[Ps. 94] Veníte, exsultémus. #r[2.]
 
-#title[Hymnus]
+#pagebreak()
+
+#v(1fr)
+=== Hymnus
 #hymn(letter: "P", caps: "r", (
   ([æclára custos Vírginum,], [Intácta Mater Núminis,], [Cæléstis aulæ jánua,], [Spes nostra, cæli gáudium.]),
   ([#r[I]nter rubéta lílium,], [Colúmba formosíssima,], [Virga e radíce gérminans], [Nostro medélam vúlneri,]),
@@ -375,7 +398,9 @@
   ([#r[G]lória tibi, Dómine,], [Qui natus es de Vírgine,], [Cum Patre, et Sancto Spíritu,], [In sempitérna sǽcula.]),
 ))
 
-#nocturn[In I Nocturno]
+#v(1fr)
+== In I Nocturno
+#v(1fr)
 
 #r[Ant.] A solis ortu #star usque ad occásum, magnum est nomen meum in géntibus.
 
@@ -385,12 +410,14 @@
 
 #r[Ant.] Invénta sum #star a non quæréntibus me; palam appárui iis, qui me non interrogábant.
 
+#colbreak()
+
 #V Notum fecit Dóminus salutáre suum. #R In conspéctu géntium revelávit glóriam suam, allelúja.
 
 #bened[Alma Virgo vírginum intercédat pro nobis ad Dóminum.]
 
 #source[De libro Ecclesiástici]
-#title-ref([Lectio j], [Cap. 24, 5-31], above: 2pt)
+=== Lectio j #h(1fr) Cap. 24, 5-31
 #initial(
   style: "woodcut",
   "E",
@@ -401,7 +428,7 @@
 
 #bened[Nos cum prole pia benedícat Virgo María.]
 
-#title[Lectio ij]
+=== Lectio ij
 #initial(
   "A",
   "b",
@@ -411,7 +438,7 @@
 
 #bened[Sancta Dei Génitrix sit nobis auxiliátrix.]
 
-#title[Lectio iij]
+=== Lectio iij
 #initial(
   "E",
   "go",
@@ -419,7 +446,7 @@
 
 #R Quæ est ista, quæ procéssit sicut sol, et formósa tamquam Jerúsalem? #rstar Vidérunt eam fíliæ Sion, et beátam dixérunt, et regínæ laudavérunt eam. #V Et sicut dies verni circúmdabant eam flores rosárum, et lília convállium. #r[V]idérunt. Glória Patri. #r[V]idérunt.
 
-#nocturn[In II Nocturno]
+== In II Nocturno
 
 #r[Ant.] Signum magnum #star appáruit in cælo~: múlier amícta sole, et luna sub pédibus ejus.
 
@@ -431,7 +458,7 @@
 
 #bened[Précibus suæ Matris benedícat nos Fílius Dei Patris.]
 
-#title[Lectio iv]
+=== Lectio iv
 #initial(
   style: "woodcut",
   "A",
@@ -442,7 +469,7 @@
 
 #bened[Jesus Maríæ Fílius sit nobis clemens et propítius.]
 
-#title[Lectio v]
+=== Lectio v
 #initial(
   "D",
   "um",
@@ -452,7 +479,7 @@
 
 #bened[Fílius Vírginis Maríæ det nobis gáudia vitæ.]
 
-#title[Lectio vj]
+=== Lectio vj
 #initial(
   "M",
   "a",
@@ -460,7 +487,7 @@
 
 #R Elégi et sanctificávi locum istum~: #rstar Ut sit ibi nomen meum, et permáneant óculi mei, et cor meum ibi cunctis diébus. #V Non fecit táliter omni natióni, et judícia sua non manifestávit eis. #r[U]t. Glória Patri. #r[U]t.
 
-#nocturn[In III Nocturno]
+== In III Nocturno
 
 #r[Ant.] Tabernáculum Dei #star María, in médio civitátis ejus, et non commovébitur.
 
@@ -473,11 +500,12 @@
 #bened[Fons Evangélii répleat nos dógmate cæli.]
 
 #source[Léctio sancti Evangélii\ secúndum Lucam]
-#title-ref([Lectio vij], [Cap. 1, 39-47], above: 4pt)
+
+=== Lectio vij #h(1fr) Cap. 1, 39-47
 #initial(
   "I",
   "n",
-)[ illo témpore~: Exsúrgens María ábiit in montána cum festinatióne, in civitátem Juda. Et intrávit in domum Zacharíæ, et salutávit Elísabeth. Et réliqua.]
+)[ illo témpore~: Exsúrgens María ábiit in montána cumfestinatióne, in civitátem Juda. Et intrávit in domum Zacharíæ, et salutávit Elísabeth. Et réliqua.]
 
 #source(sub: [De verbis Apoc. cap. 12, ad finem])[Homilía sancti Bernárdi Abbátis]
 #initial(
@@ -490,7 +518,7 @@
 
 #bened[Ab hoste malígno deféndat nos Dei Génitrix Virgo.]
 
-#title[Lectio viij]
+=== Lectio viij
 #initial(
   "T",
   "u",
@@ -504,11 +532,11 @@
 
 #bened[Verba Redemptóris pia sint suffrágia nobis.]
 
-#title[Lectio ix]
+=== Lectio ix
 #initial(
   "I",
   "n",
-)[effábili síquidem artifício Spíritus supervéniens tantæ humilitáti, magnanímitas tanta in secretário virgínei cordis accéssit, ut quod vidélicet nec humílitas tanta minúerit magnanimitátem, nec magnanímitas tanta humilitátem. Sed cum in sua æstimatióne tam húmilis esset, nihilóminus et in promissiónis credulitáte magnánimis, ut quæ nihil áliud quam exíguam sese reputábat ancíllam, ad inscrutábile sacraméntum nullátenus se dubitáret eléctam, et veram Dei et hóminis Genitrícem créderet mox futúram. Jam te, Mater misericórdiæ, per ipsum sinceríssimæ tuæ mentis afféctum tuis jacens provolúta pédibus luna, mediatrícem sibi apud solem justítiæ constitútam, devótis supplicatiónibus interpéllat, ut in lúmine tuo vídeat lumen, et solis grátiam tuo mereátur obténtu, quam vere amávit præ ómnibus, et ornávit stola glóriæ índuens, et corónam pulchritúdinis ponens in cápite tuo.]
+)[#set text(costs: (hyphenation: 25%)); effábili síquidem artifício Spíritus supervéniens tantæ humilitáti, magnanímitas tanta in secretário virgínei cordis accéssit, ut quod vidélicet nec humílitas tanta minúerit magnanimitátem, nec magnanímitas tanta humilitátem. Sed cum in sua æstimatióne tam húmilis esset, nihilóminus et in promissiónis credulitáte magnánimis, ut quæ nihil áliud quam exíguam sese reputábat ancíllam, ad inscrutábile sacraméntum nullátenus se dubitáret eléctam, et veram Dei et hóminis Genitrícem créderet mox futúram. Jam te, Mater misericórdiæ, per ipsum sinceríssimæ tuæ mentis afféctum tuis jacens provolúta pédibus luna, mediatrícem sibi apud solem justítiæ constitútam, devótis supplicatiónibus interpéllat, ut in lúmine tuo vídeat lumen, et solis grátiam tuo mereátur obténtu, quam vere amávit præ ómnibus, et ornávit stola glóriæ índuens, et corónam pulchritúdinis ponens in cápite tuo.]
 
 #R Christi Virgo dilectíssima, virtútum operátrix, opem fer míseris~: #rstar Súbveni, Dómina, clamántibus ad te júgiter. #V Quóniam peccatórum mole prémimur, et non est qui ádjuvet. #r[S]úbveni. Glória Patri. #r[S]úbveni.
 
@@ -516,7 +544,9 @@ Te Deum laudámus. #r[6.]
 
 #r[Sacerd.] #V Ora pro nobis, sancta Dei Génitrix. #R Ut digni efficiámur promissiónibus Christi, allelúja.
 
-#hour(sub: [et per Horas])[Ad Laudes]
+= Ad Laudes
+#v(-7.4pt)
+=== et per Horas
 
 #r[Ant. 1] Quæ est ista #star quæ procéssit sicut sol, et formósa tamquam Jerúsalem.
 
@@ -530,13 +560,13 @@ Te Deum laudámus. #r[6.]
 
 #r[5] Tu glória #star Jerúsalem, tu lætítia Israel, tu honorificéntia pópuli tui.
 
-#title-ref([Capitulum], [Eccli. 24, 23-24])
+=== Capitulum #h(1fr) Eccli. 24, 23-24
 #initial(
   "E",
   "go",
 )[ quasi vitis fructificávi suavitátem odóris~: et flores mei fructus honóris et honestátis. Ego mater pulchræ dilectiónis, et timóris, et agnitiónis, et sanctæ spei.]
 
-#title[Hymnus]
+=== Hymnus
 #hymn(letter: "A", caps: "l", (
   ([ma Parens, omni carens], [Corruptélæ mácula,], [Quam elégit qui confrégit], [Diræ mortis víncula.]),
   ([#r[C]lemens, præsta, ut qui festa], [Tua gaudent cólere,], [Gratuléntur et læténtur], [Veræ lucis lúmine.]),
@@ -552,7 +582,7 @@ Te Deum laudámus. #r[6.]
 
 #r[Ad Bened. Ant.] Quasi arcus #star refúlgens inter nébulas glóriæ, et quasi flos rosárum in diébus vernis.
 
-#title[Oratio]
+=== Oratio
 #initial(
   "D",
   "e",
@@ -564,7 +594,7 @@ Te Deum laudámus. #r[6.]
 
 #rubric[Ad Horas Antiphonæ de Laudibus, Psalmi de Dominica, ad Primam tamen ut in Festis et in Responsorio #V #blk[Qui de Vírgine dignátus es nasci.] Reliqua ut in Communi \[177\].]
 
-#hour[In II Vesperis]
+= In II Vesperis
 
 #rubric[Antiphonæ de Laudibus, Psalmi, Capitulum et Hymnus #blk[Ave, maris stella,] de Communi \[177\].]
 
@@ -578,7 +608,7 @@ Te Deum laudámus. #r[6.]
 
 #V Diffúsa est grátia in lábiis tuis. #R Proptérea benedíxit te Deus in ætérnum, allelúja.
 
-#block(above: 4pt, below: 2pt, sticky: true, par(first-line-indent: 0pt)[Orémus. #h(1fr) #r[Oratio.]])
+#block(above: par-spacing, below: par-spacing, sticky: true, par(first-line-indent: 0pt)[Orémus. #h(1fr) #r[Oratio.]])
 #initial(
   "E",
   "x",
@@ -589,8 +619,6 @@ Te Deum laudámus. #r[6.]
 #rubric[Completorium de Dominica.]
 
 #rubric[Ad Nunc dimittis Ant. #blk[Allelúja, Sancta.]]
-
-#v(1em)
 
 #red-rule
 #align(center, text(size: 9pt, par(justify: false, first-line-indent: 0pt, leading: leading-for(
