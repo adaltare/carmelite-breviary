@@ -23,7 +23,7 @@ _Your mission is to retypeset an old breviary scan using the Typst document engi
 
 ### Office of Our Lady of Guadalupe
 
-- [ ] Extract the header image from the common of Our Lady \[161\]
+- [x] Extract the header image from the common of Our Lady \[161\]
 - [ ] Align the crop marks to the orginal marks
 - [ ] Extract the Versicle and Response marks into a custom font
 - [ ] Match the asterisks to the original

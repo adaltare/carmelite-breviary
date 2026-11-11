@@ -17,7 +17,7 @@
 // =====================================================================
 
 /// Path of the header woodcut. `none` draws a placeholder of the same size.
-#let woodcut-image = "test3.png"
+#let woodcut-image = "common-of-our-lady.png"
 // #let woodcut-image = none
 
 #let red = rgb(226, 35, 38)
@@ -331,7 +331,7 @@
   set text(top-edge: "cap-height", bottom-edge: "baseline")
   block(above: 0pt, below: 0pt, pad(top: -13.4pt, {
     if woodcut-image != none {
-      image(woodcut-image, height: 100pt)
+      image(woodcut-image, width: auto)
     } else {
       rect(width: 242pt, height: 100pt, stroke: 0.5pt, align(center + horizon, text(
         size: 8pt,
@@ -339,14 +339,14 @@
       )[woodcut\ 20251031\_131444495]))
     }
   }))
-  v(23pt)
+  v(12pt)
   text(size: sizes.day, tracking: 0em, number-type: "lining")[DIE 12 DECEMBRIS]
   v(0pt)
   let r = body => text(fill: red, body)
   text(font: fonts.blackletter, size: sizes.feast)[#r[B.] #r[M]ariæ #r[V]irg. de #r[G]uadalupe]
-  v(7.4pt)
+  v(6pt)
   text(size: sizes.rank, weight: 400, fill: red, tracking: 0em)[DUPLEX MAJUS I CLASSIS]
-  v(15.5pt)
+  v(13pt)
   [#metadata(none)#col-start]
 })
 
