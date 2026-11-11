@@ -1,10 +1,4 @@
 .DS_Store
-/screenshots/
-/tesseract/
 *.pdf
-/mvp/raw/*.jpg
-/mvp/fonts/
-/mvp/target/
-/mvp/assets/
-/inserts/guadalupe/assumption/*.png
-/inserts/guadalupe/guadalupe/*.png
+!/inserts/guadalupe/1938_Our_Lady_of_Guadalupe_Appendix.pdf
+!/inserts/guadalupe/assumption-reference.pdf

@@ -36,4 +36,4 @@ _Your mission is to retypeset an old breviary scan using the Typst document engi
 ## Tooling
 
 - [ ] Allow draging in the viewer to change the offsets
-- [ ] Setup Git LFS
+- [x] Setup Git LFS
