@@ -1,0 +1,12 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "Watch Guadalupe",
+    "command": "typst watch --font-path mvp/fonts inserts/guadalupe/guadalupe.typ inserts/guadalupe/guadalupe.pdf",
+    // "reveal": "never",
+    // "reveal_target": "dock",
+    // "hide": "on_success",
+  },
+]
