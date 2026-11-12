@@ -23,13 +23,12 @@
 #let red = rgb(226, 35, 38)
 
 #let fonts = (
-  // Plantin has no ǽ; EB Garamond supplies it.
   body: "Plantin",
   // Plantin has only lining figures; the Assumption prints old-style.
   figures: "EB Garamond",
   hours: "Superclarendon",
-  // ℣ ℟ (missing from Plantin).
-  signs: "Cardo",
+  // I have patched the Plantin font to include the versicle and response marks.
+  signs: "Carmel Roman",
   blackletter: "Cloister",
   woodcut: "Goudy Initialen",
 )
@@ -69,11 +68,14 @@
 // Sheet and trim (pt, from the crop marks of the scans).
 #let sheet = (width: 385.5pt, height: 583.9pt)
 // #let sheet = (width: 383pt, height: 583.9pt)
-#let trim = (x0: 36.7pt, x1: 348.8pt, y0: 36.7pt, y1: 541.8pt)
+/// The crop marks of the scans sit 36.85pt in from every edge of the sheet.
+#let crop-inset = 36.85pt
+#let trim = (x0: crop-inset, x1: sheet.width - crop-inset, y0: crop-inset, y1: sheet.height - crop-inset)
 #let margin = (inside: 68.3pt, outside: 66pt, top: 86.4pt, bottom: 70pt)
 #let gutter = 9.2pt
 #let head-baseline = 77pt
 #let head-rule = 81.8pt
+#let hairline-stroke-width = 0.8pt
 
 // =====================================================================
 //  Inline marks
@@ -84,7 +86,7 @@
 #let V = r[#text(font: fonts.signs)[℣].]
 #let R = r[#text(font: fonts.signs)[℟].]
 /// Mediant asterisk, black (antiphons) and red (responsories).
-#let star = box(text(size: 0pt, baseline: 0.12em, "*"))
+#let star = box(text(baseline: 0.12em, "*"))
 #let rstar = r(star)
 /// Small capitals made from capitals (Plantin has none).
 #let sc(body) = text(size: 0.8em, tracking: 0.03em, upper(body))
@@ -122,7 +124,7 @@
 /// Black centred source line (De libro …, Homilía …), optional red sub.
 #let source(body, sub: none) = block(width: 100%, above: 8pt, below: 2pt, sticky: true, align(center, {
   set par(leading: leading-for(pitch), justify: false)
-  body
+  text(size: sizes.body, body)
   if sub != none {
     linebreak()
     text(size: sizes.sub, fill: red, sub)
@@ -199,7 +201,7 @@
 }
 
 /// Red rule across the column (closing the office).
-#let red-rule = block(above: 6pt, below: 6pt, line(length: 100%, stroke: 0.5pt + red))
+#let red-rule = block(above: 6pt, below: 6pt, line(length: 100%, stroke: hairline-stroke-width + red))
 
 // =====================================================================
 //  Page furniture
@@ -240,7 +242,7 @@
       if calc.even(n) { num }, text(fill: red, title), if not calc.even(n) { num },
     ),
   )))
-  place(dx: x, dy: head-rule, line(length: block-width, stroke: 0.5pt))
+  place(dx: x, dy: head-rule, line(length: block-width, stroke: hairline-stroke-width))
 }
 
 #let col-start = <column-rule-start>
@@ -260,7 +262,7 @@
   if ends.len() > 0 and ends.first().location().position().x < x {
     y1 = ends.first().location().position().y
   }
-  place(dx: x, dy: y0, line(angle: 90deg, length: y1 - y0, stroke: 0.8pt + red))
+  place(dx: x, dy: y0, line(angle: 90deg, length: y1 - y0, stroke: hairline-stroke-width + red))
 }
 
 // =====================================================================
@@ -414,6 +416,8 @@
 
 #V Notum fecit Dóminus salutáre suum. #R In conspéctu géntium revelávit glóriam suam, allelúja.
 
+#v(1fr)
+
 #bened[Alma Virgo vírginum intercédat pro nobis ad Dóminum.]
 
 #source[De libro Ecclesiástici]
@@ -424,7 +428,7 @@
   "go",
 )[ ex ore Altíssimi prodívi, primogénita ante omnem creatúram: ego feci in cælis ut orirétur lumen indefíciens, et sicut nébula texi omnem terram: ego in altíssimis habitávi, et thronus meus in colúmna nubis. Gyrum cæli circuívi sola, et profúndum abýssi penetrávi, in flúctibus maris ambulávi, et in omni terra steti~: et in omni pópulo, et in omni gente primátum hábui: et ómnium excelléntium et humílium corda virtúte calcávi~: et in his ómnibus réquiem quæsívi, et in hereditáte Dómini morábor. Tunc præcépit, et dixit mihi Creátor ómnium~: et qui creávit me, requiévit in tabernáculo meo, et dixit mihi~: In Jacob inhábita, et in Israël hereditáre, et in eléctis meis mitte radíces.]
 
-#R Vidi speciósam sicut colúmbam ascendéntem désuper rivos aquárum~: cujus inæstimábilis odor erat nimis in vestiméntis ejus~: #rstar Et sicut dies verni circúmdabant eam flores rosárum, et lília convállium. #V Quæ est ista, quæ ascéndit per desértum sicut vírgula fumi ex aromátibus myrrhæ et thuris? #r[E]t sicut dies verni.
+#R Vidi speciósam sicut colúmbam ascendéntem désuper rivos aquárum~: cujus inæstimábilis odor erat nimis in vestiméntis ejus~: #rstar Et sicut dies verni circúmdabant eam flores rosárum, et lília convállium. #V Quæ est ista, quæ ascéndit per desértum sicut vírgula fumi ex aromátibus myrrhæ et thuris? #r[E]t.
 
 #bened[Nos cum prole pia benedícat Virgo María.]
 
@@ -456,7 +460,7 @@
 
 #V Introíbimus in tabernáculum ejus. #R Adorábimus in loco ubi stetérunt pedes ejus, allelúja.
 
-#bened[Précibus suæ Matris benedícat nos Fílius Dei Patris.]
+#bened[Précibus suæ Matris #set text(spacing: 3pt);benedícat nos Fílius Dei Patris.]
 
 === Lectio iv
 #initial(
@@ -505,7 +509,7 @@
 #initial(
   "I",
   "n",
-)[ illo témpore~: Exsúrgens María ábiit in montána cumfestinatióne, in civitátem Juda. Et intrávit in domum Zacharíæ, et salutávit Elísabeth. Et réliqua.]
+)[ illo témpore~: Exsúrgens María ábiit in montána cum festinatióne, in civitátem Juda. Et intrávit in domum Zacharíæ, et salutávit Elísabeth. Et réliqua.]
 
 #source(sub: [De verbis Apoc. cap. 12, ad finem])[Homilía sancti Bernárdi Abbátis]
 #initial(
@@ -544,9 +548,14 @@ Te Deum laudámus. #r[6.]
 
 #r[Sacerd.] #V Ora pro nobis, sancta Dei Génitrix. #R Ut digni efficiámur promissiónibus Christi, allelúja.
 
+#v(par-spacing * 2)
+
 = Ad Laudes
-#v(-7.4pt)
+#v(-1 * par-spacing)
 === et per Horas
+#v(par-spacing)
+
+#v(par-spacing * 2)
 
 #r[Ant. 1] Quæ est ista #star quæ procéssit sicut sol, et formósa tamquam Jerúsalem.
 
@@ -560,13 +569,19 @@ Te Deum laudámus. #r[6.]
 
 #r[5] Tu glória #star Jerúsalem, tu lætítia Israel, tu honorificéntia pópuli tui.
 
+#v(7pt)
+
 === Capitulum #h(1fr) Eccli. 24, 23-24
+
+#v(3pt)
+
 #initial(
   "E",
   "go",
 )[ quasi vitis fructificávi suavitátem odóris~: et flores mei fructus honóris et honestátis. Ego mater pulchræ dilectiónis, et timóris, et agnitiónis, et sanctæ spei.]
 
 === Hymnus
+
 #hymn(letter: "A", caps: "l", (
   ([ma Parens, omni carens], [Corruptélæ mácula,], [Quam elégit qui confrégit], [Diræ mortis víncula.]),
   ([#r[C]lemens, præsta, ut qui festa], [Tua gaudent cólere,], [Gratuléntur et læténtur], [Veræ lucis lúmine.]),
@@ -604,11 +619,11 @@ Te Deum laudámus. #r[6.]
 
 #rubric[Fit Commemoratio sequentis:]
 
-#r[Ant.] In patiéntia tua #star possedísti ánimam tuam, Lúcia, sponsa Christi~: odísti quæ in mundo sunt,#colbreak() et corúscas cum Angelis~: sánguine próprio inimícum vicísti.
+#r[Ant.] In patiéntia tua #star possedísti ánimam tuam, Lúcia, sponsa Christi~: odísti quæ in mundo sunt, et corúscas cum Angelis~: sánguine próprio inimícum vicísti.
 
 #V Diffúsa est grátia in lábiis tuis. #R Proptérea benedíxit te Deus in ætérnum, allelúja.
 
-#block(above: par-spacing, below: par-spacing, sticky: true, par(first-line-indent: 0pt)[Orémus. #h(1fr) #r[Oratio.]])
+#block(above: par-spacing * 2, below: par-spacing, par(first-line-indent: 0pt)[Orémus. #h(1fr) #r[Oratio.]])
 #initial(
   "E",
   "x",
@@ -619,6 +634,8 @@ Te Deum laudámus. #r[6.]
 #rubric[Completorium de Dominica.]
 
 #rubric[Ad Nunc dimittis Ant. #blk[Allelúja, Sancta.]]
+
+#v(6pt)
 
 #red-rule
 #align(center, text(size: 9pt, par(justify: false, first-line-indent: 0pt, leading: leading-for(

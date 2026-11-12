@@ -24,16 +24,24 @@ _Your mission is to retypeset an old breviary scan using the Typst document engi
 ### Office of Our Lady of Guadalupe
 
 - [x] Extract the header image from the common of Our Lady \[161\]
-- [ ] Align the crop marks to the orginal marks
-- [ ] Extract the Versicle and Response marks into a custom font
-- [ ] Match the asterisks to the original
-- [ ] Align the page breaks to match the 1938 reprint
-- [ ] Balanced the columns at the end of the office
-- [ ] Add a stylized motif line at the end of the office
+- [x] Fix divider line widths
+- [x] Align the crop marks to the orginal marks
+- [x] Extract the Versicle and Response marks into a custom font
+- [x] Match the asterisks to the original
+- [x] Align the page breaks to match the 1938 reprint
+- [x] Balanced the columns at the end of the office
+- [x] Add a stylized motif line at the end of the office (not needed)
 - [ ] Extract the original decorative inital lombaric capitals into a custom font
+- [ ] Fix spacing of lines after inital capital
 - [ ] Experiment with stack based fractional spacing
 
 ## Tooling
 
 - [ ] Allow draging in the viewer to change the offsets
 - [x] Setup Git LFS
+
+**Convert any PDF into a booklet**
+
+```sh
+pdfjam --booklet true --landscape --otheredge --suffix booklet my.pdf
+```
