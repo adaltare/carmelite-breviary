@@ -1,12 +1,8 @@
 // Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
-//
-// Example:
 [
   {
-    "label": "Watch Guadalupe",
-    "command": "typst watch --font-path mvp/fonts inserts/guadalupe/guadalupe.typ inserts/guadalupe/guadalupe.pdf",
-    // "reveal": "never",
-    // "reveal_target": "dock",
-    // "hide": "on_success",
+    "label": "Typst: Watch File",
+    "command": "typst watch --root typeset/ --font-path typeset/fonts '$ZED_RELATIVE_FILE' '$ZED_RELATIVE_DIR/$ZED_STEM.pdf'",
+    "save": "current",
   },
 ]
